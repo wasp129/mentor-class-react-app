@@ -1,0 +1,18 @@
+.header {
+	background-color: #89a3d0;
+	padding: 20px 0 20px 0;
+}
+
+.title {
+	font-family: sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.ui.inverted.menu {
+	border-radius: 0;
+}
+
+img {
+	width: 100px;
+}
