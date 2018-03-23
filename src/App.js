@@ -4,9 +4,10 @@ import Logo from "./react.svg";
 class App extends Component {
   render() {
     return (
-      <div>
+    	<div>
         <Header title="React Guide"/>
         <Body/>
+        <Footer title="Mentor Class React JS 2018"/>
       </div>
     );
   }
@@ -51,6 +52,15 @@ class Overview extends Component {
 
 // Svilena START
 
+class Footer extends Component{
+	render() {
+		return(
+		<div className="footer">
+    		<p className="title">{this.props.title}</p>
+		</div>
+		)
+	}
+}
 
 // Svilena STOP
 
