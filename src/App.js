@@ -7,6 +7,7 @@ class App extends Component {
     	<div>
         <Header title="React Guide"/>
         <Body/>
+        <Tutorials/>
         <Footer title="Mentor Class React JS 2018"/>
       </div>
     );
@@ -35,16 +36,50 @@ class Body extends Component {
   }
 }
 
+
+//Petya OVERVIEW START
 class Overview extends Component {
   render() {
     return (
-      <div>
-        <h1 className="headline">WELCOME TO THE FIRST DAY OF THE REST OF YOUR LIFE.</h1>
-        <p>This is an introduction to React. We're going to have fun, learn some stuff, make money and get bitches.</p>
+      <div className="overview container-full">
+        <h1 className="headline">Test</h1>
+        <div className="row-3">
+          <div className="column-3">
+          <h3>Introduction</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div className="column-3">
+          <h3>About Documentation</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div className="column-3">
+          <h3>About Tutorials</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <button>Read more</button>
       </div>
     )
   }
 }
+
+//OVERVIEW STOP
+
+//Petya TUTORIAL START
+
+class Tutorials extends Component {
+  render() {
+    return (
+      <div className="tutorials container-full"> 
+        <h1 className="headline">Tutorials</h1>
+
+      </div>
+    )
+  }
+}
+
+//TUTORIAL STOP
+
 
 // Svilena START
 
