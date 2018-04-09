@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
+import { Router, Route, hashHistory, Link } from 'react-router';
 import Logo from "./react.svg";
 
 class App extends Component {
   render() {
     return (
-    	<div>
+      <Router history={hashHistory}>
+        <Route path='/' component={EntryPoint} />
+        <Route path='/page2' component={SecondPage} />
+        <Route path='/page3' component={ThirdPage} />
+      </Router>
+    );
+  }
+}
+
+class EntryPoint extends Component {
+  render() {
+    return (
+      <div>
         <Header title="React Guide"/>
         <Body/>
         <Tutorials/>
         <Footer title="Mentor Class React JS 2018"/>
       </div>
-    );
+    )
   }
 }
 
@@ -21,6 +34,10 @@ class Header extends Component {
       <div className="header">
         <img src={Logo} alt="Alt"/>
         <p className="title">{this.props.title}</p>
+        <ul role="navigation">
+          <li><Link to="/page2">Page two</Link></li>
+          <li><Link to="/page3">Page three</Link></li>
+        </ul>
       </div>
     );
   }
@@ -35,7 +52,6 @@ class Body extends Component {
     )
   }
 }
-
 
 //Petya OVERVIEW START
 class Overview extends Component {
@@ -63,10 +79,6 @@ class Overview extends Component {
   }
 }
 
-//OVERVIEW STOP
-
-//Petya TUTORIAL START
-
 class Tutorials extends Component {
   render() {
     return (
@@ -78,11 +90,6 @@ class Tutorials extends Component {
   }
 }
 
-//TUTORIAL STOP
-
-
-// Svilena START
-
 class Footer extends Component{
 	render() {
 		return(
@@ -93,66 +100,30 @@ class Footer extends Component{
 	}
 }
 
-// Svilena STOP
+// Dummy page for displaying how routing works
+class SecondPage extends Component {
+  render() {
+    return(
+      <div className="newpage">
+        <h1>THIS IS A NEW PAGE Y'ALL</h1>
+      </div>
+    )
+  }
+};
+
+class ThirdPage extends Component {
+  render() {
+    return(
+      <div className="newpage">
+        <h1>THIS IS A THIRD PAGE! WHAT??!</h1>
+      </div>
+    )
+  }
+};
+
 
 export default App;
 
 
-/*
-class Sidebar extends Component {
-  render() {
-    return (
-    
-    )
-  }
-}
-
-class SidebarSteps extends Component { 
-  render() {
-    return(
-
-    )
-  }
-}
-
-//FOOTER COMPONENT
-
-//arrays with objects
-const prerequisits = [
-  //collection of elements
-  {
-    step: "Overview",
-    step: "Node.js",
-    step: "Babel",
-    step: "Git",
-    step: "JSX/ES6",
-    step: "Semantic UI"
-  }
-]
-
-const development = [
-  {
-    step: "Hello world",
-    step: "Complex" 
-  }
-]
-
-const action = [
-  {
-    step: "Build a landingpage",
-    step: "Build an article page",
-    step: "Optional: To-do list with DB"
-  }
-]
-
-const deployment = [
-  {
-    step: "Azure"
-  }
-]
-
-console.log(prerequisits, development, action, deployment);
-
-*/
 
 
