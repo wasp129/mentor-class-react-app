@@ -30,7 +30,7 @@ class Body extends Component {
   render() {
     return(
       <div className="body">
-        <Overview/>
+        <Overview title="Overview"/> 
       </div>
     )
   }
@@ -42,7 +42,7 @@ class Overview extends Component {
   render() {
     return (
       <div className="overview container-full">
-        <h1 className="headline">Test</h1>
+        <h1 className="headline">{this.props.title}</h1>
         <div className="row-3">
           <div className="column-3">
           <h3>Introduction</h3>
