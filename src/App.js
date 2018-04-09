@@ -5,9 +5,8 @@ class App extends Component {
   render() {
     return (
     	<div>
-        <Header title="React Guide"/>
+        <Nav title="React Guide"/>
         <Body/>
-        <Tutorials/>
         <Footer title="Mentor Class React JS 2018"/>
       </div>
     );
@@ -15,10 +14,10 @@ class App extends Component {
 }
 
 //header element
-class Header extends Component {
+class Nav extends Component {
   render() {
     return (
-      <div className="header">
+      <div className="nav">
         <img src={Logo} alt="Alt"/>
         <p className="title">{this.props.title}</p>
       </div>
@@ -30,11 +29,28 @@ class Body extends Component {
   render() {
     return(
       <div className="body">
+        <Header title="This is the Header"/>
         <Overview title="Overview"/> 
+        <Tutorials title="Tutorials"/>
       </div>
     )
   }
 }
+
+// HEADER START 
+
+class Header extends Component {
+  render(){
+    return (
+      <div className="header container-full">
+        <h1 className="headline">{this.props.title}</h1>
+
+      </div>
+    )
+  }
+}
+
+//HEADER STOP 
 
 
 //Petya OVERVIEW START
@@ -71,7 +87,17 @@ class Tutorials extends Component {
   render() {
     return (
       <div className="tutorials container-full"> 
-        <h1 className="headline">Tutorials</h1>
+        <h1 className="headline">{this.props.title}</h1>
+        <div className="row-2">
+        <div className="column-2">
+          <p>Tutorial 1</p>
+          <button>Read more</button>
+        </div>
+        <div className="column-2">
+          <p>Tutorial 2</p>
+          <button>Read more</button>
+        </div>
+        </div>
 
       </div>
     )

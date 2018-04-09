@@ -1,5 +1,15 @@
-.header { 
-	background-color: #89a3d0;
+h1, h2, h3, h4, h5, h6, p {
+	color: #EDF2EE;
+}
+
+button {
+	background-color: #68D9FB;
+	border: none;
+	padding: 10px 20px;
+}
+
+.nav { 
+	background-color: #010101;
 	padding: 20px 0;
  }
 
@@ -25,25 +35,23 @@ img {
 	width: 100px;
 }
 
-.footer{
-	background-color: #89a3d0;
-    width: 100%;
-	padding: 20px 0 20px 0;
-    text-align: center;
-    transition: 200ms;
-    
-}
 
 .container-full {
 	width: 100%;
 	padding: 40px 60px;
+	text-align: center;
 }
 
-/* Overview - home page */
+/* HEADER - home page */
+
+.header {
+	background-color: #262626;
+}
+
+/* OVERVIEW - home page */
 
 .overview {
-	background-color: #efefef;
-	text-align: center;
+	background-color: #3D3D3D;
 }
 
 .row-3 {
@@ -57,9 +65,35 @@ img {
 	padding: 30px 50px;
 }
 
-/* Tutorials - home page */
+/* TUTORIALS - home page */
 
 .tutorials {
-	background-color: #dedede;
-	text-align: center;
+	background-color: #262626;
 }
+
+.row-2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	max-width: 1100px;
+	margin: auto;
+}
+
+.column-2 {
+	width: 40%;
+	margin: 30px 50px;
+	padding: 60px;
+	background-color: darksalmon;
+}
+
+/* FOOTER */
+
+.footer{
+	background-color: #010101;
+    width: 100%;
+	padding: 20px 0 20px 0;
+    text-align: center;
+    transition: 200ms;
+    
+}
+
