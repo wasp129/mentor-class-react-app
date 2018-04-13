@@ -10,6 +10,8 @@ class Home extends Component {
         <Header title="React Guide"/>
         <Body/>
         <Footer title="Mentor Class React JS 2018"/>
+        <State/>
+        <Clock/>
       </div>
     )
   }
@@ -111,6 +113,76 @@ class Footer extends Component{
 		</div>
 		)
 	}
+}
+
+
+// EXAMPLES WITH STATE. A COUNTER, A DYNAMIC MESSAGE AND A CLOCK
+
+const h2Style = {
+  color: 'black'
+};
+
+class State extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            clicks: 0,
+            message: "Gallant Fox"
+        };
+    }
+
+    UpdateCount = () => {
+        this.setState({ clicks: this.state.clicks + 1});
+    }
+
+    UpdateMessage = () => {
+        this.setState({ message: "War admiral"});
+    }
+
+    render() {
+        return (
+            <div>
+                <h2 style={h2Style}>{this.state.clicks}</h2>
+                <button onClick = {this.UpdateCount}>Click to count</button>
+                <h2 style={h2Style}>{this.state.message}</h2>
+                <button onClick = {this.UpdateMessage}>Update the message</button>
+            </div>
+        )
+    }
+}
+
+class Clock extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: new Date()
+        };
+    }
+
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID)
+    }
+
+    tick() {
+        this.setState({
+            date: new Date()
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <h2 style={h2Style}>The time is now: {this.state.date.toLocaleTimeString()}</h2>
+            </div>
+        )
+    }
 }
 
 export default Home;
