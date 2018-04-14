@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Logo from "../images/logo.svg";
+import Asset1 from "../images/Asset1.png";
+import Asset2 from "../images/Asset2.png";
+import Asset3 from "../images/Asset3.png";
 
 class Home extends Component {
   render() {
@@ -10,8 +13,6 @@ class Home extends Component {
         {/* <Header title="React Guide"/> */} 
         <Body/>
         <Footer title="Mentor Class React JS 2018"/>
-        <State/>
-        <Clock/>
       </div>
     )
   }
@@ -21,10 +22,10 @@ class Home extends Component {
 class Nav extends Component {
   render() {
     return (
-      <div className="nav">
+      <div className="nav container-full">
         <div className="nav-left">
           <img src={Logo} className="logo-nav" alt="logo react"/>
-          <p className="title">{this.props.title}</p>
+          <p className="logo-txt">{this.props.title}</p>
         </div>
         
         <ul className="nav-right" role="navigation">
@@ -43,7 +44,9 @@ class Body extends Component {
       <div className="body">
         <Header title="Do you React?"/>
         <Overview title="Overview"/> 
-        <Tutorials title="Tutorials"/>
+        <Tutorials title="Build your first app"/>
+        <State/>
+        <Clock/>
       </div>
     )
   }
@@ -67,22 +70,25 @@ class Overview extends Component {
   render() {
     return (
       <div className="overview container-full">
-        <h1 className="headline">{this.props.title}</h1>
+      {/* <h1>{this.props.title}</h1> */} 
         <div className="row-3">
           <div className="column-3">
-          <h3 className="headline">Introduction</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src={Asset1} className="icons" alt="icon1"/>
+            <h2>Introduction</h2>
+            <p>This is the introduction. The aim of this website. To whom is it meant for. What does it contain. </p>
           </div>
           <div className="column-3">
-          <h3 className="headline">About Documentation</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <img src={Asset2} className="icons" alt="icon2"/>
+            <h2>Documentation</h2>
+            <p>Introduction/explanation for the docs part. Prerequisits + Development etc. </p>
           </div>
           <div className="column-3">
-          <h3 className="headline">About Tutorials</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <img src={Asset3} className="icons" alt="icon3"/>
+            <h2>Tutorials</h2>
+            <p>What, how, for whom, Action part + Deployment etc. Full code on Github.  </p>
           </div>
         </div>
-        <button>Read more</button>
+          <button>Get Started</button>
       </div>
     )
   }
@@ -92,15 +98,15 @@ class Tutorials extends Component {
   render() {
     return (
       <div className="tutorials container-full"> 
-        <h1 className="headline">{this.props.title}</h1>
+        <h2>{this.props.title}</h2>
         <div className="row-2">
         <div className="column-2">
-          <p>Tutorial 1</p>
-          <button>Read more</button>
+        <h3>Tutorial 1</h3>
+          <button>View Code</button>
         </div>
         <div className="column-2">
-          <p>Tutorial 2</p>
-          <button>Read more</button>
+        <h3>Tutorial 2</h3>
+          <button>View Code</button>
         </div>
         </div>
 
@@ -109,11 +115,21 @@ class Tutorials extends Component {
   }
 }
 
+class Examples extends Component{
+  render() {
+    return(
+    <div className="footer">
+        <p>{this.props.title}</p>
+    </div>
+    )
+  }
+}
+
 class Footer extends Component{
 	render() {
 		return(
 		<div className="footer">
-    		<p className="title">{this.props.title}</p>
+    		<p>{this.props.title}</p>
 		</div>
 		)
 	}
@@ -145,7 +161,8 @@ class State extends Component {
 
     render() {
         return (
-            <div>
+            <div className="examples container-full" >
+                <h2>Examples with state</h2>
                 <h2 style={h2Style}>{this.state.clicks}</h2>
                 <button onClick = {this.UpdateCount}>Click to count</button>
                 <h2 style={h2Style}>{this.state.message}</h2>
@@ -182,7 +199,7 @@ class Clock extends Component {
 
     render() {
         return (
-            <div>
+            <div className="examples container-full" >
                 <h2 style={h2Style}>The time is now: {this.state.date.toLocaleTimeString()}</h2>
             </div>
         )
