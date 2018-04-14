@@ -1,30 +1,85 @@
-h1, h2, h3, h4, h5, h6, p {
-	color: #EDF2EE;
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:300,400,500,600,700&subset=latin-ext');
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Poppins', sans-serif;
+	color:  #68D9FB;
 }
 
-button {
-	background-color: #68D9FB;
-	border: none;
-	padding: 10px 20px;
+h3.headline {
+	color:  #68D9FB;
+}
+
+p{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 0.9em;
+	color: #EAE6DC;
 }
 
 .nav { 
 	background-color: #010101;
-	padding: 20px 0;
- }
+	padding: 1% 2%;
+	display: flex;
+}
+
+.logo-nav{
+	display: inline-block;
+	height: 30px;
+	margin-top: 4px;
+}
+
+.nav-left{
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 2px;
+	margin-right: 51%;
+}
+
+.nav-right{
+	display: flex;
+	justify-content: flex-end;
+}
+
+ul{
+	list-style-type: none;
+}
+
+li {
+	padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}
+
+.link-menu {
+	display: block;
+	text-align: center;
+	padding: 0 16px;
+	text-decoration: none;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+}
+
+.link-menu:hover{
+	color: #68D9FB;
+}
 
 .title {
-	font-family: sans-serif;
-	color: white;
-	text-align: center;
+    color: #68D9FB;
+    margin-left: -31px;
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.logo {
-	width: 150px;
-}
 
 .headline {
-	font-family: sans-serif;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	color: white;
 }
 
 .ui.inverted.menu {
@@ -48,6 +103,32 @@ img {
 	background-color: #262626;
 }
 
+.logo {
+	animation: logo-spin infinite 20s linear;
+	width: 150px;
+}
+
+@keyframes logo-spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+button {
+	background-color: #68D9FB;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	font-size: 1em;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
 /* OVERVIEW - home page */
 
 .overview {
@@ -63,6 +144,7 @@ img {
 .column-3 {
 	width: 25%;
 	padding: 30px 50px;
+	line-height: 1.6;
 }
 
 /* TUTORIALS - home page */
