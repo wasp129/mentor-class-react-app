@@ -115,16 +115,6 @@ class Tutorials extends Component {
   }
 }
 
-class Examples extends Component{
-  render() {
-    return(
-    <div className="footer">
-        <p>{this.props.title}</p>
-    </div>
-    )
-  }
-}
-
 class Footer extends Component{
 	render() {
 		return(
