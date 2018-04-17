@@ -29,7 +29,7 @@ class Nav extends Component {
         </div>
         
         <ul className="nav-right" role="navigation">
-          <li><Link className="link-menu" to="#">Home</Link></li>
+          <li><Link className="link-menu" to="/">Home</Link></li>
           <li><Link className="link-menu" to="/page2">Page two</Link></li>
           <li><Link className="link-menu" to="/page3">Page three</Link></li>
         </ul>
