@@ -30,17 +30,17 @@ li {
 
 .logo-nav{
 	display: inline-block;
-	height: 30px;
+	height: 36px;
 	margin-top: 4px;
 }
 
 .logo-txt {
     color: #68D9FB;
-    margin-left: -31px;
+    margin-left: -22px;
     padding-top: 10px;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 29px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -73,18 +73,20 @@ h1.headline{
 	display: flex;
 	justify-content: flex-start;
 	padding-top: 2px;
-	margin-right: 50%;
+	width: 10%;
 }
 
 .nav-right{
 	display: flex;
+	flex-grow: 2;
 	justify-content: flex-end;
+	padding-right: 2%;
 }
 
 .link-menu {
 	display: block;
 	text-align: center;
-	padding: 0 5px;
+	padding: 0 3px;
 	text-decoration: none;
 	color: white;
 	font-family: 'Poppins', sans-serif;
@@ -98,6 +100,11 @@ h1.headline{
 
 .ui.inverted.menu {
 	border-radius: 0;
+}
+
+.search{
+	padding-left: 1%;
+	margin-top: -5px;
 }
 
 .container-full {
@@ -189,6 +196,13 @@ button:hover {
 	padding: 2% 3%;
 }
 
+
+.sidebar{
+	width: 30%;
+	padding: 3% 1% 5% 4%;
+
+}
+
 /* FOOTER */
 
 .footer{
@@ -200,3 +214,12 @@ button:hover {
     
 }
 
+@media only screen and (max-width: 1600px) {
+    .nav-left{
+		width: 16%;
+	}
+
+	.container-full{
+		max-width: 100%;
+	}
+}

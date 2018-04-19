@@ -4,6 +4,7 @@ import Logo from "../images/logo.svg";
 import Asset1 from "../images/Asset1.png";
 import Asset2 from "../images/Asset2.png";
 import Asset3 from "../images/Asset3.png";
+import { Input } from 'semantic-ui-react'
 
 class Home extends Component {
   render() {
@@ -30,13 +31,23 @@ class Nav extends Component {
         
         <ul className="nav-right" role="navigation">
           <li><Link className="link-menu" to="/">Home</Link></li>
-          <li><Link className="link-menu" to="/page2">Page two</Link></li>
-          <li><Link className="link-menu" to="/page3">Page three</Link></li>
-        </ul>
+          <li><Link className="link-menu" to="/page2">Documentation</Link></li>
+          <li><Link className="link-menu" to="/page3">Tutorials</Link></li>
+
+          <div className="ui mini icon input search">
+            <input type="text" placeholder="Search..." />
+            <i aria-hidden="true" className="search icon"></i>
+          </div>
+         </ul>
       </div>
     );
   }
 }
+
+const InputExampleLoadingWithoutIcon = () => (
+  <Input size='mini' icon='search' placeholder='Search...' />
+)
+
 
 class Body extends Component {
   render() {
