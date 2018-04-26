@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import Logo from "../images/logo.svg";
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 
-class ThirdPage extends Component {
+class PageFour extends Component {
   render() {
     return(
       <div className="docs-page">
@@ -49,9 +49,9 @@ class Body extends Component {
 			<div className="body">
 			<div className="formContainer">
 				<LoginForm/>
-				<h4>You don't have an account? 
-				<a className="textHightlight"><Link to="page4"> Register here</Link></a>
-				</h4>
+				<h4>Go back to
+        <a className="textHightlight"><Link to="page3"> Login</Link></a>
+        </h4>
 			</div>
 			</div>
 		)
@@ -60,7 +60,11 @@ class Body extends Component {
 
 const LoginForm = () => (
   <Form className="loginForm">
-  	<h1>Login</h1>
+  	<h1>Register</h1>
+    <Form.Field>
+      <label>Name</label>
+      <input placeholder='Name' name="name"/>
+    </Form.Field>
     <Form.Field>
       <label>Email</label>
       <input placeholder='Email' name="email"/>
@@ -68,6 +72,13 @@ const LoginForm = () => (
     <Form.Field>
       <label>Password</label>
       <input placeholder='Password' name="password"/>
+    </Form.Field>
+    <Form.Field>
+      <label>Confirm Password</label>
+      <input placeholder='Confirm Password' name="password"/>
+    </Form.Field>
+    <Form.Field>
+      <Checkbox label='I agree to the Terms and Conditions' />
     </Form.Field>
     <button className="button" type='submit'>Submit</button>
   </Form>
@@ -85,4 +96,4 @@ class Footer extends Component {
 	}
 }
 
-export default ThirdPage;
+export default PageFour;
