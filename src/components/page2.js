@@ -20,6 +20,9 @@ class SecondPage extends Component {
 //header element
 class Nav extends Component {
   render() {
+  	const InputExampleLoadingWithoutIcon = () => (
+	  <Input size='mini' icon='search' placeholder='Search...' />
+	)
     return (
       <div className="nav container-full">
         <div className="nav-left">
@@ -63,15 +66,13 @@ class Sidebar extends Component {
 	}
 }
 
-const InputExampleLoadingWithoutIcon = () => (
-  <Input size='mini' icon='search' placeholder='Search...' />
-)
 
-{/*Accordeon start*/}
+
+{/*Accordion start*/}
 	const level1Panels = [
 	  { title: 'Overview', content: 'Overview Contents' },
 	  { title: 'Node.js', content: 'Node.js Contents' },
-	  { title: 'Yarn', content: 'Yarns Contents' },
+	  { title: 'Npm Packages', content: 'Npm Contents' },
 	  { title: 'Babel', content: 'Babel Contents' },
 	  { title: 'Git', content: 'Git Contents' },
 	  { title: 'JSX and ES6', content: 'JSX and ES6 Contents' },
@@ -135,7 +136,7 @@ const InputExampleLoadingWithoutIcon = () => (
 	  <Accordion defaultActiveIndex={0} panels={rootPanels} styled />
 	)
 
-{/*Accordeon end*/}
+{/*Accordion end*/}
 
 
 class Footer extends Component{
