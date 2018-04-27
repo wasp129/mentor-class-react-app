@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Logo from "../images/logo.svg";
 import { Input } from 'semantic-ui-react';
 import { Accordion } from 'semantic-ui-react';
 
@@ -23,7 +22,6 @@ class Nav extends Component {
     return (
       <div className="nav container-full">
         <div className="nav-left">
-          <img src={Logo} className="logo-nav" alt="logo react"/>
           <p className="logo-txt">{this.props.title}</p>
         </div>
         

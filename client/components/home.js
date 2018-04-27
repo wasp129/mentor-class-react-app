@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Logo from "../images/logo.svg";
+// import Logo from "../images/logo.svg";
 import Asset1 from "../images/Asset1.png";
 import Asset2 from "../images/Asset2.png";
 import Asset3 from "../images/Asset3.png";
-import { Input } from 'semantic-ui-react'
 
 class Home extends Component {
   render() {
@@ -25,7 +24,7 @@ class Nav extends Component {
     return (
       <div className="nav container-full">
         <div className="nav-left">
-          <img src={Logo} className="logo-nav" alt="logo react"/>
+          <img src="../images/logo.svg" className="logo-nav" alt="logo react"/>
           <p className="logo-txt">{this.props.title}</p>
         </div>
         
@@ -33,6 +32,7 @@ class Nav extends Component {
           <li><Link className="link-menu" to="/">Home</Link></li>
           <li><Link className="link-menu" to="/page2">Documentation</Link></li>
           <li><Link className="link-menu" to="/page3">Tutorials</Link></li>
+          <li><Link className="link-menu" to="/NewArticle">New article</Link></li>
 
           <div className="ui mini icon input search">
             <input type="text" placeholder="Search..." />
@@ -56,7 +56,6 @@ class Body extends Component {
         <Header title="Do you React?"/>
         <Overview title="Overview"/> 
         <Tutorials title="Build your first app"/>
-        <State/>
         <Clock/>
       </div>
     )
@@ -69,7 +68,7 @@ class Header extends Component {
   render(){
     return (
       <div className="header container-full">
-        <img src={Logo} className="logo" alt="logo react"/>
+        <img src="../images/logo.svg" className="logo" alt="logo react"/>
         <h1 className="headline">{this.props.title}</h1>
       </div>
     )
@@ -139,39 +138,35 @@ class Footer extends Component{
 
 // EXAMPLES WITH STATE. A COUNTER, A DYNAMIC MESSAGE AND A CLOCK
 
-const h2Style = {
-  color: 'black'
-};
+// class State extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             clicks: 0,
+//             message: "Gallant Fox"
+//         };
+//     }
 
-class State extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            clicks: 0,
-            message: "Gallant Fox"
-        };
-    }
+//     UpdateCount = () => {
+//         this.setState({ clicks: this.state.clicks + 1});
+//     }
 
-    UpdateCount = () => {
-        this.setState({ clicks: this.state.clicks + 1});
-    }
+//     UpdateMessage = () => {
+//         this.setState({ message: "War admiral"});
+//     }
 
-    UpdateMessage = () => {
-        this.setState({ message: "War admiral"});
-    }
-
-    render() {
-        return (
-            <div className="examples container-full" >
-                <h2>Examples with state</h2>
-                <h2 style={h2Style}>{this.state.clicks}</h2>
-                <button onClick = {this.UpdateCount}>Click to count</button>
-                <h2 style={h2Style}>{this.state.message}</h2>
-                <button onClick = {this.UpdateMessage}>Update the message</button>
-            </div>
-        )
-    }
-}
+//     render() {
+//         return (
+//             <div className="examples container-full" >
+//                 <h2>Examples with state</h2>
+//                 <h2 style={h2Style}>{this.state.clicks}</h2>
+//                 <button onClick = {this.UpdateCount}>Click to count</button>
+//                 <h2 style={h2Style}>{this.state.message}</h2>
+//                 <button onClick = {this.UpdateMessage}>Update the message</button>
+//             </div>
+//         )
+//     }
+// }
 
 class Clock extends Component {
     constructor(props) {
@@ -201,7 +196,7 @@ class Clock extends Component {
     render() {
         return (
             <div className="examples container-full" >
-                <h2 style={h2Style}>The time is now: {this.state.date.toLocaleTimeString()}</h2>
+                <h2>The time is now: {this.state.date.toLocaleTimeString()}</h2>
             </div>
         )
     }
