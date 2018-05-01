@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Nav from "./nav.js";
+import Footer from "./footer.js";
+
 var querystring = require('querystring');
 
 class NewArticle extends React.Component {
@@ -74,9 +77,9 @@ handleTextChange(e) {
 }
 
 render() {
-   // if(this.state.messageFromServer == ''){   }
    	return (
    		<div>
+            <Nav/>
 	   		<label htmlFor="title">Title:</label>
 	   		<input type="text" id="title" name="title" value={this.state.title} onChange={this.handleTextChange}></input>
 	   		<label htmlFor="content">Content:</label>
@@ -98,6 +101,7 @@ render() {
             </tbody>
 </table>
       </div>
+      <Footer title="Mentor Class React JS 2018"/>
    		</div>
    	);
 }
