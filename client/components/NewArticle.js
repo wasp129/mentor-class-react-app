@@ -10,16 +10,31 @@ class NewArticle extends React.Component {
 		    title: '',
 		    content: '',
 		    category: '',
-		    messageFromServer: ''
+		    messageFromServer: '',
+            data: [],
 		}
 
 	    this.onClick = this.onClick.bind(this);
 	    this.handleTextChange = this.handleTextChange.bind(this);
 	    this.insertNewArticle = this.insertNewArticle.bind(this);
+        this.getData = this.getData.bind(this);
 	}
+
+    componentDidMount() {
+        this.getData(this);
+    }
+
+    getData(ev){
+    axios.get('/getAll')
+      .then(function(response) {
+        ev.setState({data: response.data});
+        console.log(response.data)
+      });
+    }
 
 	onClick(e) {
       this.insertNewArticle(this);
+      this.getData(this);
     }
 
 insertNewArticle(e) {
@@ -68,7 +83,21 @@ render() {
 	   		<input type="text" id="content" name="content" value={this.state.content} onChange={this.handleTextChange}></input>
 	   		<label htmlFor="category">Category:</label>
 	   		<input type="text" id="category" name="category" value={this.state.category} onChange={this.handleTextChange}></input>
-	   		<button onClick={this.onClick}>Add New Article</button>
+            <button onClick={this.onClick}>Add New Article</button>
+            <div>
+        <table>
+          <thead>
+            <tr><th></th><th className='desc-col'>Title</th><th className='button-col'>Content</th><th className='button-col'>Category</th></tr>
+          </thead>
+          <tbody>
+            {
+              this.state.data.map(function(exp){
+                return  <tr><td className='counterCell'></td><td className='desc-col'>{exp.title}</td><td className='button-col'>{exp.content}</td><td className='button-col'>{exp.category}</td></tr>
+              })
+            }
+            </tbody>
+</table>
+      </div>
    		</div>
    	);
 }
