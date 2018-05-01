@@ -31,7 +31,7 @@ class Nav extends Component {
         <ul className="nav-right" role="navigation">
           <li><Link className="link-menu" to="/">Home</Link></li>
           <li><Link className="link-menu" to="/page2">Documentation</Link></li>
-          <li><Link className="link-menu" to="/page3">Tutorials</Link></li>
+          <li><Link className="link-menu" to="/page3">Login</Link></li>
           <li><Link className="link-menu" to="/NewArticle">New article</Link></li>
 
           <div className="ui mini icon input search">
