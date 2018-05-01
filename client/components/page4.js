@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import Logo from "../images/logo.svg";
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 
-class ThirdPage extends Component {
+class PageFour extends Component {
   render() {
     return(
       <div className="docs-page">
@@ -21,7 +22,7 @@ class Nav extends Component {
     return (
       <div className="nav container-full">
         <div className="nav-left">
-          <img src="../images/logo.svg" className="logo-nav" alt="logo react"/>
+          <img src={Logo} className="logo-nav" alt="logo react"/>
           <p className="logo-txt">{this.props.title}</p>
         </div>
         
@@ -29,7 +30,6 @@ class Nav extends Component {
           <li><Link className="link-menu" to="/">Home</Link></li>
           <li><Link className="link-menu" to="/page2">Documentation</Link></li>
           <li><Link className="link-menu" to="/page3">Login</Link></li>
-          <li><Link className="link-menu" to="/NewArticle">New article</Link></li>
 
           <div className="ui mini icon input search">
             <input type="text" placeholder="Search..." />
@@ -48,18 +48,23 @@ class Body extends Component {
 		return (
 			<div className="body">
 			<div className="formContainer">
-				<LoginForm/>
-				<h4>You don't have an account? 
-				<a className="textHightlight"><Link to="/page4"> Register here</Link></a>
-				</h4>
+				<RegisterForm/>
+				<h4>Go back to
+        <a className="textHightlight"><Link to="page3"> Login</Link></a>
+        </h4>
 			</div>
 			</div>
 		)
 	}
 }
-const LoginForm = () => (
+
+const RegisterForm = () => (
   <Form className="loginForm">
-  	<h1>Login</h1>
+  	<h1>Register</h1>
+    <Form.Field>
+      <label>Name</label>
+      <input placeholder='Name' name="name"/>
+    </Form.Field>
     <Form.Field>
       <label>Email</label>
       <input placeholder='Email' name="email"/>
@@ -68,9 +73,18 @@ const LoginForm = () => (
       <label>Password</label>
       <input placeholder='Password' name="password"/>
     </Form.Field>
+    <Form.Field>
+      <label>Confirm Password</label>
+      <input placeholder='Confirm Password' name="password"/>
+    </Form.Field>
+    <Form.Field>
+      <Checkbox label='I agree to the Terms and Conditions' />
+    </Form.Field>
     <button className="button" type='submit'>Submit</button>
   </Form>
 )
+
+
 //Footer element
 class Footer extends Component {
 	render(){
@@ -81,4 +95,5 @@ class Footer extends Component {
 		)
 	}
 }
-export default ThirdPage;
+
+export default PageFour;
