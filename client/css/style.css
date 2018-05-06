@@ -203,6 +203,11 @@ button:hover {
 
 }
 
+.comment {
+	border-bottom: 1px solid black;
+	margin-bottom: 15px;
+}
+
 /* FOOTER */
 
 .footer{
@@ -212,6 +217,16 @@ button:hover {
     text-align: center;
     transition: 200ms;
     
+}
+
+/* Animation */
+
+.switch-wrapper {
+  position: relative;
+}
+ 
+.switch-wrapper > div {
+  position: absolute;
 }
 
 @media only screen and (max-width: 1600px) {

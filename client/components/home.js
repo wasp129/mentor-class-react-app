@@ -4,8 +4,8 @@ import Asset1 from "../images/Asset1.png";
 import Asset2 from "../images/Asset2.png";
 import Asset3 from "../images/Asset3.png";
 
-import Nav from "./nav.js";
-import Footer from "./footer.js";
+import Nav from "./Nav.js";
+import Footer from "./Footer.js";
 
 class Home extends Component {
   render() {

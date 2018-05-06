@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Nav from "./nav.js";
-import Footer from "./footer.js";
+import Nav from "./Nav.js";
+import Footer from "./Footer.js";
 
 var querystring = require('querystring');
 
@@ -79,28 +79,25 @@ handleTextChange(e) {
 render() {
    	return (
    		<div>
-            <Nav/>
+        <Nav/>
 	   		<label htmlFor="title">Title:</label>
 	   		<input type="text" id="title" name="title" value={this.state.title} onChange={this.handleTextChange}></input>
 	   		<label htmlFor="content">Content:</label>
 	   		<input type="text" id="content" name="content" value={this.state.content} onChange={this.handleTextChange}></input>
 	   		<label htmlFor="category">Category:</label>
 	   		<input type="text" id="category" name="category" value={this.state.category} onChange={this.handleTextChange}></input>
-            <button onClick={this.onClick}>Add New Article</button>
-            <div>
-        <table>
-          <thead>
-            <tr><th></th><th className='desc-col'>Title</th><th className='button-col'>Content</th><th className='button-col'>Category</th></tr>
-          </thead>
-          <tbody>
-            {
-              this.state.data.map(function(exp){
-                return  <tr><td className='counterCell'></td><td className='desc-col'>{exp.title}</td><td className='button-col'>{exp.content}</td><td className='button-col'>{exp.category}</td></tr>
-              })
-            }
-            </tbody>
-</table>
-      </div>
+        <button onClick={this.onClick}>Add New Article</button>
+        {
+          this.state.data.map(function(exp){
+            return  (
+              <div className="comment">
+                <h2>{exp.title}</h2>
+                <p>{exp.category}</p>
+                <p>{exp.content}</p>
+              </div>
+            )
+          })
+        }
       <Footer title="Mentor Class React JS 2018"/>
    		</div>
    	);
