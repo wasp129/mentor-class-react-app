@@ -8,7 +8,8 @@ h1, h2, h3, h4, h5, h6{
 
 p{
 	font-family: 'PT Sans', sans-serif;
-	font-size: 0.9em;
+	font-size: 1em;
+    line-height: 1.4;
 	color: #323232;
 }
 
@@ -237,4 +238,9 @@ button:hover {
 	.container-full{
 		max-width: 100%;
 	}
+}
+
+/* Modals */
+.modal-img{
+	width: 150px;
 }

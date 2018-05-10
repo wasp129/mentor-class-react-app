@@ -46918,7 +46918,7 @@ var Overview = function (_Component4) {
             _react2.default.createElement(
               'p',
               null,
-              'This is the introduction. The aim of this website. To whom is it meant for. What does it contain. '
+              'Are you new to React and you are looking for the best place to start? Here you can find a systemathic and beginner friendly starters guide to help you learn the basics.'
             )
           ),
           _react2.default.createElement(
@@ -46933,7 +46933,7 @@ var Overview = function (_Component4) {
             _react2.default.createElement(
               'p',
               null,
-              'Introduction/explanation for the docs part. Prerequisits + Development etc. '
+              'In our documentation section you can find small articles about few of the basic concepts in React, from setting up your environment to building your first app. '
             )
           ),
           _react2.default.createElement(
@@ -46948,7 +46948,7 @@ var Overview = function (_Component4) {
             _react2.default.createElement(
               'p',
               null,
-              'What, how, for whom, Action part + Deployment etc. Full code on Github.  '
+              'Amonng the documentation you will find small code snippets and guidance how to start working with the React library. This web app serves as an introduction to the followng workshop. '
             )
           )
         ),
@@ -67936,7 +67936,7 @@ var Overview = function Overview() {
     _react2.default.createElement(
       _semanticUiReact.Modal.Content,
       { image: true },
-      _react2.default.createElement(_semanticUiReact.Image, { wrapped: true, size: 'medium', src: 'images/ov-1.png' }),
+      _react2.default.createElement(_semanticUiReact.Image, { className: 'modal-img', src: 'images/ov-1.png' }),
       _react2.default.createElement(
         _semanticUiReact.Modal.Description,
         null,
@@ -67946,23 +67946,23 @@ var Overview = function Overview() {
           _react2.default.createElement(
             'h2',
             null,
-            'Chapter 1'
+            'Why React?'
           )
         ),
         _react2.default.createElement(
           'p',
           null,
-          'ReactJS is an open-source JavaScript library which is used for building user interfaces specifically for single page applications. React allows developers to create large web applications which can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It is used for handling the view layer (or user interfaces) of web applications. This corresponds to view in the MVC template.'
+          'ReactJS is an open-source JavaScript library which is used for building user interfaces specifically for single page applications. React allows developers to create large web applications which can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It is used for handling the view layer (or user interfaces) of web applications. This corresponds to view in the MVC template. At the heart of all React applications are components. Broadly speaking, to write React apps we write components that correspond to various interface elements. We then organize these components inside higher-level components which define the structure of our application. The components correspond to interface elements. React also allows us to create reusable UI components.'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'At the heart of all React applications are components. Broadly speaking, to write React apps we write components that correspond to various interface elements. We then organize these components inside higher-level components which define the structure of our application. The components correspond to interface elements. React also allows us to create reusable UI components.'
+          'Applications built on ReactJS uses new technology that has not been used before in web application development. It is a perfect tool to make high-performance presentation layer for your application. And it can be even faster if you take the advantage of immutable data structures. As ReactJS features like components allow you to develop new features in React without rewriting existing code. There are plenty of Flux implementations you can choose from, including the brand new framework Relay. The Virtual DOM feature which was not present in Angular adds an extra advantage. Having such great performing features framework like React.js is the dream of many Web Application Development Companies. So, if you are dealing with real-time data then ReactJS is the best solution.'
         ),
         _react2.default.createElement(
           'h3',
           null,
-          'Why React?'
+          '7 Top ReactJS Features Which Makes It Best For Development'
         ),
         _react2.default.createElement(
           'dl',
@@ -67970,7 +67970,7 @@ var Overview = function Overview() {
           _react2.default.createElement(
             'p',
             null,
-            'These are some of the benefits that React offers:'
+            'Let\u2019s take a look at some of the key ReactJS Features that makes it stand out from the others.'
           ),
           _react2.default.createElement(
             'dt',
@@ -67978,13 +67978,13 @@ var Overview = function Overview() {
             _react2.default.createElement(
               'b',
               null,
-              'Simplicity'
+              'Declarative'
             )
           ),
           _react2.default.createElement(
             'dd',
             null,
-            '- ReactJS is simpler to grasp right away. The component-based approach, well-defined lifecycle, and use of just plain JavaScript make React very simple to learn. React uses a special syntax called JSX which allows you to mix HTML with JavaScript. This is not a requirement but JSX is much easier to use.'
+            'React creates very interactive and dynamic user interface for websites and mobile applications. Create simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more readable and easier to debug.'
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -67993,13 +67993,13 @@ var Overview = function Overview() {
             _react2.default.createElement(
               'b',
               null,
-              'Easy to learn'
+              'Virtual DOM'
             )
           ),
           _react2.default.createElement(
             'dd',
             null,
-            '- Anyone with a basic previous knowledge in programming can easily understand React. For react you just need basic knowledge of CSS, HTML and JavaScript.'
+            'In React, for every DOM object, there is a corresponding "virtual DOM object." A virtual DOM object is a representation of a DOM object, it creates a virtual copy of the original DOM. It\'s a one-way data binding hence manipulating the virtual DOM is quick rather than updating original DOM because nothing gets drawn onscreen.'
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -68008,13 +68008,13 @@ var Overview = function Overview() {
             _react2.default.createElement(
               'b',
               null,
-              'Data Binding'
+              'Event handling'
             )
           ),
           _react2.default.createElement(
             'dd',
             null,
-            '- React uses one-way data binding and an application architecture called Flux controls the flow of data to components through one control point \u2013 the dispatcher. It\'s easier to debug self-contained components of large ReactJS apps.'
+            'React creates its own event system which is fully compatible with W3C object model. All browser\u2019native events are wrapped by instances of Synthetic Event. It provides a cross-browser interface to a native event. That means you do not need to worry about incompatible event names and fields. Besides, React event system is implemented through event delegation and also has a pool of event objects to reduce memory overhead.'
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -68023,25 +68023,60 @@ var Overview = function Overview() {
             _react2.default.createElement(
               'b',
               null,
-              'Testability'
+              'JSX'
             )
           ),
           _react2.default.createElement(
             'dd',
             null,
-            '- ReactJS applications are super easy to test. React views can be treated as functions of the state, so we can manipulate with state we pass to the ReactJS view and take a look at the output and triggered actions, events, functions, etc.'
+            'JSX can best be thought of as a markup syntax that very closely resembles HTML.It is more or less like the combination of Javascript + XML. JSX makes writing React components, the building blocks of React UI, easier by making the syntax developers use for generating these strings of HTML almost identical to the HTML they will inject into the web page.JSX is one of best ReactJS features. Web developers will always go for an easy way out, which is why this is a great choice for many.'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'dt',
+            null,
+            _react2.default.createElement(
+              'b',
+              null,
+              'Performance'
+            )
+          ),
+          _react2.default.createElement(
+            'dd',
+            null,
+            'React uses one-way data binding with an application architecture called Flux controls.ReactJS helps us update the View for the user and, with Flux, can control the application workflow. Introducing virtual DOM adds advantages where it compares the new data with original DOM and automatically updates the view.'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'dt',
+            null,
+            _react2.default.createElement(
+              'b',
+              null,
+              'React Native'
+            )
+          ),
+          _react2.default.createElement(
+            'dd',
+            null,
+            'React Native is a custom renderer for React, just like React DOM on The Web. React Native uses native components instead of web components like React as building blocks. To begin with React Native, you need to know the basic React concepts, like JSX, components, state, and props. If you know React, you still need to learn stuff specific to React Native, like the native components. React Native also gives access to the features these platforms offer, apart from transforming React code to work on iOS and Android.'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'dt',
+            null,
+            _react2.default.createElement(
+              'b',
+              null,
+              'Component-Based'
+            )
+          ),
+          _react2.default.createElement(
+            'dd',
+            null,
+            'In React everything is component the web page divided into small components to create a view(or UIs). Every part of applications visuals would be wrapped inside a self-contained module known as a component. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep the state out of the DOM.Components in ReactJS use to define the visuals and interactions in applications.'
           )
         )
-      )
-    ),
-    _react2.default.createElement(
-      _semanticUiReact.Modal.Actions,
-      null,
-      _react2.default.createElement(
-        _semanticUiReact.Button,
-        { primary: true },
-        'Proceed ',
-        _react2.default.createElement(_semanticUiReact.Icon, { name: 'right chevron' })
       )
     )
   );
@@ -69425,7 +69460,7 @@ exports = module.exports = __webpack_require__(851)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:300,400,500,600,700&subset=latin-ext);", ""]);
 
 // module
-exports.push([module.i, "h1, h2, h3, h4, h5, h6{\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tcolor:  #68D9FB;\r\n\tfont-weight: 300;\r\n}\r\n\r\np{\r\n\tfont-family: 'PT Sans', sans-serif;\r\n\tfont-size: 0.9em;\r\n\tcolor: #323232;\r\n}\r\n\r\nul{\r\n\tlist-style-type: none;\r\n}\r\n\r\nli {\r\n\tpadding-left: 20px;\r\n    padding-right: 20px;\r\n    font-size: 18px;\r\n}\r\n\r\n.nav { \r\n\tbackground-color: #010101;\r\n\tpadding: 1% 2%;\r\n\tdisplay: flex;\r\n}\r\n\r\n.logo-nav{\r\n\tdisplay: inline-block;\r\n\theight: 36px;\r\n\tmargin-top: 4px;\r\n}\r\n\r\n.logo-txt {\r\n    color: #68D9FB;\r\n    margin-left: -22px;\r\n    padding-top: 10px;\r\n    font-weight: 400;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.logo {\r\n\tanimation: logo-spin infinite 20s linear;\r\n\twidth: 213px;\r\n}\r\n\r\n@keyframes logo-spin {\r\n\tfrom { transform: rotate(0deg); }\r\n\tto { transform: rotate(360deg); }\r\n}\r\n\r\nimg {\r\n\twidth: 100px;\r\n}\r\n\r\n.headline {\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n\tcolor: white;\r\n}\r\n\r\nh1.headline{\r\n\tfont-size: 2.5em;\r\n}\r\n\r\n.nav-left{\r\n\tdisplay: flex;\r\n\tjustify-content: flex-start;\r\n\tpadding-top: 2px;\r\n\twidth: 10%;\r\n}\r\n\r\n.nav-right{\r\n\tdisplay: flex;\r\n\tflex-grow: 2;\r\n\tjustify-content: flex-end;\r\n\tpadding-right: 2%;\r\n}\r\n\r\n.link-menu {\r\n\tdisplay: block;\r\n\ttext-align: center;\r\n\tpadding: 0 3px;\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-size: 18px;\r\n}\r\n\r\n.link-menu:hover{\r\n\tcolor: #68D9FB;\r\n}\r\n\r\n.ui.inverted.menu {\r\n\tborder-radius: 0;\r\n}\r\n\r\n.search{\r\n\tpadding-left: 1%;\r\n\tmargin-top: -5px;\r\n}\r\n\r\n.container-full {\r\n\twidth: 100%;\r\n\tpadding: 0.5% 2%;\r\n\ttext-align: center;\r\n}\r\n\r\n/* HEADER - home page */\r\n\r\n.header {\r\n\tbackground-color: #262626;\r\n\tpadding: 2%;\r\n}\r\n\r\nbutton {\r\n\tbackground-color: #68D9FB;\r\n\tcolor: white;\r\n\tborder: none;\r\n\tpadding: 10px 25px;\r\n\ttext-align: center;\r\n\tfont-size: 20px;\r\n\t-webkit-transition-duration: 0.4s; /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n    margin-top: 1%;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: white;\r\n    color: #68D9FB;\r\n    border: 1px solid #68D9FB;\r\n    cursor: pointer;\r\n}\r\n\r\n/* OVERVIEW - home page */\r\n\r\n.overview {\r\n\tpadding: 0.5% 2% 3%;\r\n}\r\n\r\n.icons{\r\n\twidth: 60px;\r\n\ttransition: transform .2s;\r\n}\r\n\r\n.icons:hover {\r\n    -ms-transform: scale(1.1); /* IE 9 */\r\n    -webkit-transform: scale(1.1); /* Safari 3-8 */\r\n    transform: scale(1.1); \r\n}\r\n\r\n.row-3 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: center;\r\n\tpadding: 1% 7%;\r\n}\r\n\r\n.column-3 {\r\n\twidth: 35%;\r\n\tpadding: 40px 60px;\r\n\tline-height: 1.6;\r\n}\r\n\r\n/* TUTORIALS - home page */\r\n\r\n.tutorials {\r\n\tbackground-color:#323232;\r\n\tpadding: 1.5% 0 3%;\r\n}\r\n\r\n.row-2 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-around;\r\n\tmax-width: 1100px;\r\n\tmargin: auto;\r\n}\r\n\r\n.column-2 {\r\n\twidth: 40%;\r\n\tmargin: 30px 50px;\r\n\tpadding: 60px;\r\n\tbackground-color: white;\r\n}\r\n\r\n.examples{\r\n\tpadding: 2% 3%;\r\n}\r\n\r\n\r\n.sidebar{\r\n\twidth: 30%;\r\n\tpadding: 3% 1% 5% 4%;\r\n\r\n}\r\n\r\n.comment {\r\n\tborder-bottom: 1px solid black;\r\n\tmargin-bottom: 15px;\r\n}\r\n\r\n/* FOOTER */\r\n\r\n.footer{\r\n\tbackground-color: #010101;\r\n    width: 100%;\r\n\tpadding: 20px 0 20px 0;\r\n    text-align: center;\r\n    transition: 200ms;\r\n    \r\n}\r\n\r\n/* Animation */\r\n\r\n.switch-wrapper {\r\n  position: relative;\r\n}\r\n \r\n.switch-wrapper > div {\r\n  position: absolute;\r\n}\r\n\r\n@media only screen and (max-width: 1600px) {\r\n    .nav-left{\r\n\t\twidth: 19%;\r\n\t}\r\n\r\n\t.container-full{\r\n\t\tmax-width: 100%;\r\n\t}\r\n}", ""]);
+exports.push([module.i, "h1, h2, h3, h4, h5, h6{\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tcolor:  #68D9FB;\r\n\tfont-weight: 300;\r\n}\r\n\r\np{\r\n\tfont-family: 'PT Sans', sans-serif;\r\n\tfont-size: 1em;\r\n    line-height: 1.4;\r\n\tcolor: #323232;\r\n}\r\n\r\nul{\r\n\tlist-style-type: none;\r\n}\r\n\r\nli {\r\n\tpadding-left: 20px;\r\n    padding-right: 20px;\r\n    font-size: 18px;\r\n}\r\n\r\n.nav { \r\n\tbackground-color: #010101;\r\n\tpadding: 1% 2%;\r\n\tdisplay: flex;\r\n}\r\n\r\n.logo-nav{\r\n\tdisplay: inline-block;\r\n\theight: 36px;\r\n\tmargin-top: 4px;\r\n}\r\n\r\n.logo-txt {\r\n    color: #68D9FB;\r\n    margin-left: -22px;\r\n    padding-top: 10px;\r\n    font-weight: 400;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.logo {\r\n\tanimation: logo-spin infinite 20s linear;\r\n\twidth: 213px;\r\n}\r\n\r\n@keyframes logo-spin {\r\n\tfrom { transform: rotate(0deg); }\r\n\tto { transform: rotate(360deg); }\r\n}\r\n\r\nimg {\r\n\twidth: 100px;\r\n}\r\n\r\n.headline {\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n\tcolor: white;\r\n}\r\n\r\nh1.headline{\r\n\tfont-size: 2.5em;\r\n}\r\n\r\n.nav-left{\r\n\tdisplay: flex;\r\n\tjustify-content: flex-start;\r\n\tpadding-top: 2px;\r\n\twidth: 10%;\r\n}\r\n\r\n.nav-right{\r\n\tdisplay: flex;\r\n\tflex-grow: 2;\r\n\tjustify-content: flex-end;\r\n\tpadding-right: 2%;\r\n}\r\n\r\n.link-menu {\r\n\tdisplay: block;\r\n\ttext-align: center;\r\n\tpadding: 0 3px;\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-size: 18px;\r\n}\r\n\r\n.link-menu:hover{\r\n\tcolor: #68D9FB;\r\n}\r\n\r\n.ui.inverted.menu {\r\n\tborder-radius: 0;\r\n}\r\n\r\n.search{\r\n\tpadding-left: 1%;\r\n\tmargin-top: -5px;\r\n}\r\n\r\n.container-full {\r\n\twidth: 100%;\r\n\tpadding: 0.5% 2%;\r\n\ttext-align: center;\r\n}\r\n\r\n/* HEADER - home page */\r\n\r\n.header {\r\n\tbackground-color: #262626;\r\n\tpadding: 2%;\r\n}\r\n\r\nbutton {\r\n\tbackground-color: #68D9FB;\r\n\tcolor: white;\r\n\tborder: none;\r\n\tpadding: 10px 25px;\r\n\ttext-align: center;\r\n\tfont-size: 20px;\r\n\t-webkit-transition-duration: 0.4s; /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n    margin-top: 1%;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: white;\r\n    color: #68D9FB;\r\n    border: 1px solid #68D9FB;\r\n    cursor: pointer;\r\n}\r\n\r\n/* OVERVIEW - home page */\r\n\r\n.overview {\r\n\tpadding: 0.5% 2% 3%;\r\n}\r\n\r\n.icons{\r\n\twidth: 60px;\r\n\ttransition: transform .2s;\r\n}\r\n\r\n.icons:hover {\r\n    -ms-transform: scale(1.1); /* IE 9 */\r\n    -webkit-transform: scale(1.1); /* Safari 3-8 */\r\n    transform: scale(1.1); \r\n}\r\n\r\n.row-3 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: center;\r\n\tpadding: 1% 7%;\r\n}\r\n\r\n.column-3 {\r\n\twidth: 35%;\r\n\tpadding: 40px 60px;\r\n\tline-height: 1.6;\r\n}\r\n\r\n/* TUTORIALS - home page */\r\n\r\n.tutorials {\r\n\tbackground-color:#323232;\r\n\tpadding: 1.5% 0 3%;\r\n}\r\n\r\n.row-2 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-around;\r\n\tmax-width: 1100px;\r\n\tmargin: auto;\r\n}\r\n\r\n.column-2 {\r\n\twidth: 40%;\r\n\tmargin: 30px 50px;\r\n\tpadding: 60px;\r\n\tbackground-color: white;\r\n}\r\n\r\n.examples{\r\n\tpadding: 2% 3%;\r\n}\r\n\r\n\r\n.sidebar{\r\n\twidth: 30%;\r\n\tpadding: 3% 1% 5% 4%;\r\n\r\n}\r\n\r\n.comment {\r\n\tborder-bottom: 1px solid black;\r\n\tmargin-bottom: 15px;\r\n}\r\n\r\n/* FOOTER */\r\n\r\n.footer{\r\n\tbackground-color: #010101;\r\n    width: 100%;\r\n\tpadding: 20px 0 20px 0;\r\n    text-align: center;\r\n    transition: 200ms;\r\n    \r\n}\r\n\r\n/* Animation */\r\n\r\n.switch-wrapper {\r\n  position: relative;\r\n}\r\n \r\n.switch-wrapper > div {\r\n  position: absolute;\r\n}\r\n\r\n@media only screen and (max-width: 1600px) {\r\n    .nav-left{\r\n\t\twidth: 19%;\r\n\t}\r\n\r\n\t.container-full{\r\n\t\tmax-width: 100%;\r\n\t}\r\n}", ""]);
 
 // exports
 

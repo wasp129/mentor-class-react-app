@@ -61,17 +61,17 @@ class Overview extends Component {
           <div className="column-3">
             <img src={Asset1} className="icons" alt="icon1"/>
             <h2>Introduction</h2>
-            <p>This is the introduction. The aim of this website. To whom is it meant for. What does it contain. </p>
+            <p>Are you new to React and you are looking for the best place to start? Here you can find a systemathic and beginner friendly starters guide to help you learn the basics.</p>
           </div>
           <div className="column-3">
           <img src={Asset2} className="icons" alt="icon2"/>
             <h2>Documentation</h2>
-            <p>Introduction/explanation for the docs part. Prerequisits + Development etc. </p>
+            <p>In our documentation section you can find small articles about few of the basic concepts in React, from setting up your environment to building your first app. </p>
           </div>
           <div className="column-3">
           <img src={Asset3} className="icons" alt="icon3"/>
             <h2>Tutorials</h2>
-            <p>What, how, for whom, Action part + Deployment etc. Full code on Github.  </p>
+            <p>Amonng the documentation you will find small code snippets and guidance how to start working with the React library. This web app serves as an introduction to the followng workshop. </p>
           </div>
         </div>
           <button>Get Started</button>
