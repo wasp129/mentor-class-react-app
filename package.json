@@ -13,6 +13,7 @@
     "marked": "^0.3.19",
     "mongoose": "^5.0.16",
     "nodemon": "^1.17.3",
+    "npm-watch": "^0.3.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
@@ -26,10 +27,18 @@
     "semantic-ui-react": "^0.79.1",
     "url-loader": "^1.0.1"
   },
+  "watch": {
+    "start": {
+      "patterns": ["client", "server"],
+      "extensions": "js",
+      "ignore": "client/bundle.js"
+    }
+  },
   "scripts": {
     "webpack": "webpack",
-    "start": "npm run webpack --watch && nodemon --exec babel-node -- bin/www",
+    "start": "npm run webpack && nodemon --exec babel-node -- bin/www",
     "build": "react-scripts build",
+    "watch": "npm-watch",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

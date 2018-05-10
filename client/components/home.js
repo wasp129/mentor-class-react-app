@@ -12,7 +12,6 @@ class Home extends Component {
     return (
       <div>
         <Nav/>
-        {/* <Header title="React Guide"/> */} 
         <Body/>
         <Footer title="Mentor Class React JS 2018"/>
       </div>
