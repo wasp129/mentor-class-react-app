@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6{
 	font-weight: 300;
 }
 
+h4, h5, h6 {
+	color: #323232;
+}
+
 p{
 	font-family: 'PT Sans', sans-serif;
 	font-size: 0.9em;
@@ -123,7 +127,7 @@ h1.headline{
 button {
 	background-color: #68D9FB;
 	color: white;
-	border: none;
+	border: 1px solid #68D9FB;
 	padding: 10px 25px;
 	text-align: center;
 	font-size: 20px;
@@ -203,11 +207,6 @@ button:hover {
 
 }
 
-.comment {
-	border-bottom: 1px solid black;
-	margin-bottom: 15px;
-}
-
 /* FOOTER */
 
 .footer{
@@ -219,22 +218,46 @@ button:hover {
     
 }
 
-/* Animation */
-
-.switch-wrapper {
-  position: relative;
-}
- 
-.switch-wrapper > div {
-  position: absolute;
-}
-
 @media only screen and (max-width: 1600px) {
     .nav-left{
-		width: 19%;
+		width: 16%;
 	}
 
 	.container-full{
 		max-width: 100%;
 	}
+}
+
+
+/* LOGIN FORM */
+
+.loginForm {
+	width: 400px;
+	margin: 40px auto;
+	padding: 25px;
+	border: 1px solid #dedede;
+	box-shadow: 0px 1px 10px 0px #eeeeee;
+	transition: 0.5s;
+}
+
+.loginForm h1, h4 {
+	text-align: center;
+}
+
+
+.loginForm:hover {
+	box-shadow: 0px 2px 10px 4px #eeeeee;
+}
+
+.ui.form .field {
+	margin: 20px 0px !important;
+}
+
+.textHightlight {
+	color: #68D9FB;
+	font-weight: 600;
+}
+
+.formContainer {
+	margin: 50px auto;
 }
