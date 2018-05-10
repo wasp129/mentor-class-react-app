@@ -7,6 +7,7 @@ import Nav from "./Nav.js";
 import Footer from "./Footer.js";
 
 import Overview from './Articles/Overview';
+import Node from './Articles/Node';
 
 // Dummy page for displaying how routing works
 class Documentation extends Component {
@@ -26,6 +27,7 @@ class Body extends Component {
     return(
       <div className="body">
         <Overview/>
+        <Node/>
       </div>
     )
   }
