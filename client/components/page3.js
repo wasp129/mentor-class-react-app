@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
+<<<<<<< HEAD
+=======
+
+import Nav from "./Nav.js";
+import Footer from "./Footer.js";
+
+>>>>>>> 085268840d4d80bb57881ab49cb3faedc82216fe
 
 class ThirdPage extends Component {
   render() {
@@ -14,6 +21,7 @@ class ThirdPage extends Component {
   }
 };
 
+<<<<<<< HEAD
 
 //header element
 class Nav extends Component {
@@ -42,6 +50,8 @@ class Nav extends Component {
 }
 
 
+=======
+>>>>>>> 085268840d4d80bb57881ab49cb3faedc82216fe
 //Body element
 class Body extends Component {
 	render(){
@@ -57,6 +67,10 @@ class Body extends Component {
 		)
 	}
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 085268840d4d80bb57881ab49cb3faedc82216fe
 const LoginForm = () => (
   <Form className="loginForm">
   	<h1>Login</h1>
@@ -71,6 +85,7 @@ const LoginForm = () => (
     <button className="button" type='submit'>Submit</button>
   </Form>
 )
+<<<<<<< HEAD
 //Footer element
 class Footer extends Component {
 	render(){
@@ -81,4 +96,7 @@ class Footer extends Component {
 		)
 	}
 }
+=======
+
+>>>>>>> 085268840d4d80bb57881ab49cb3faedc82216fe
 export default ThirdPage;

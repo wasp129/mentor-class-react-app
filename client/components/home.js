@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-// import Logo from "../images/logo.svg";
 import Asset1 from "../images/Asset1.png";
 import Asset2 from "../images/Asset2.png";
 import Asset3 from "../images/Asset3.png";
+
+import Nav from "./Nav.js";
+import Footer from "./Footer.js";
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Nav title="React Guide"/>
+        <Nav/>
         {/* <Header title="React Guide"/> */} 
         <Body/>
         <Footer title="Mentor Class React JS 2018"/>
@@ -18,6 +20,7 @@ class Home extends Component {
   }
 }
 
+<<<<<<< HEAD
 //header element
 class Nav extends Component {
   render() {
@@ -44,6 +47,8 @@ class Nav extends Component {
   }
 }
 
+=======
+>>>>>>> 085268840d4d80bb57881ab49cb3faedc82216fe
 const InputExampleLoadingWithoutIcon = () => (
   <Input size='mini' icon='search' placeholder='Search...' />
 )
@@ -124,17 +129,6 @@ class Tutorials extends Component {
     )
   }
 }
-
-class Footer extends Component{
-	render() {
-		return(
-		<div className="footer">
-    		<p>{this.props.title}</p>
-		</div>
-		)
-	}
-}
-
 
 // EXAMPLES WITH STATE. A COUNTER, A DYNAMIC MESSAGE AND A CLOCK
 

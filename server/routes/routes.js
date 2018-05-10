@@ -22,22 +22,6 @@ router.route('/insert')
         });
     })
 
-// router.route('/update')
-//     .post(function(req, res) {
-//         const doc = {
-//             description: req.body.description,
-//             amount: req.body.amount,
-//             month: req.body.month,
-//             year: req.body.year
-//         };
-//         console.log(doc);
-//         Expense.update({ _id: req.body._id }, doc, function(err, result) {
-//             if (err)
-//                 res.send(err);
-//             res.send('Expense successfully updated!');
-//         });
-//     });
-
 router.get('/delete', function(req, res) {
     var id = req.query.id;
     Article.find({ _id: id }).remove().exec(function(err, article) {
@@ -47,4 +31,19 @@ router.get('/delete', function(req, res) {
     })
 });
 
+
+router.get('/getAll',function(req, res) {
+    Article.find( function(err, articles) {
+   if (err)
+    res.send(err);
+   res.json(articles);
+  });
+
+});
+
 module.exports = router;
+
+
+
+
+
