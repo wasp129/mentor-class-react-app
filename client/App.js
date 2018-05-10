@@ -3,8 +3,10 @@ import { Router, Route, hashHistory } from 'react-router';
 
 import Home from "./components/Home.js";
 import Documentation from "./components/Documentation.js";
-import ThirdPage from "./components/page3.js";
+import LoginPage from "./components/login.js";
 import NewArticle from "./components/NewArticle.js";
+import ToDoList from "./components/ToDoList.js";
+
 
 class App extends Component {
   render() {
@@ -12,8 +14,9 @@ class App extends Component {
       <Router history={hashHistory}>
         <Route path='/' component={Home} />
         <Route path='/Documentation' component={Documentation} />
-        <Route path='/page3' component={ThirdPage} />
+        <Route path='/login' component={LoginPage} />
         <Route path='/NewArticle' component={NewArticle} />
+        <Route path='/ToDoList' component={ToDoList} />
       </Router>
     );
   }

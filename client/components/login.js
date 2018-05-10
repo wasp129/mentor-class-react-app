@@ -6,7 +6,7 @@ import Nav from "./Nav.js";
 import Footer from "./Footer.js";
 
 
-class ThirdPage extends Component {
+class LoginPage extends Component {
   render() {
     return(
       <div className="docs-page">
@@ -44,4 +44,4 @@ const LoginForm = () => (
     <button className="button" type='submit'>Submit</button>
   </Form>
 )
-export default ThirdPage;
+export default LoginPage;
