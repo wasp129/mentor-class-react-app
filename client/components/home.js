@@ -8,7 +8,7 @@ import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react';
 import Nav from "./Nav.js";
 import Footer from "./Footer.js";
 
-import LiveData from './Articles/LiveData';
+import LiveData from './Examples/LiveData';
 
 class Home extends Component {
   render() {
