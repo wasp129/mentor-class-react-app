@@ -241,6 +241,17 @@ button:hover {
 }
 
 /* Modals */
+
+
 .modal-img{
 	width: 150px;
+	height: 86px;
+}
+
+code{
+	background-color: black;
+	color: white;
+	font-size: 0.9em;
+	padding: 0.3%;
+    line-height: 2em;
 }
