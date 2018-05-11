@@ -3,9 +3,12 @@ import { Link } from 'react-router';
 import Asset1 from "../images/Asset1.png";
 import Asset2 from "../images/Asset2.png";
 import Asset3 from "../images/Asset3.png";
+import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react';
 
 import Nav from "./Nav.js";
 import Footer from "./Footer.js";
+
+import LiveData from './Articles/LiveData';
 
 class Home extends Component {
   render() {
@@ -28,9 +31,9 @@ class Body extends Component {
   render() {
     return(
       <div className="body">
-        <Header title="Do you React?"/>
+        <HeaderMain title="Do you React?"/>
         <Overview title="Overview"/> 
-        <Tutorials title="Build your first app"/>
+        <Tutorials title="Examples"/>
         <Clock/>
       </div>
     )
@@ -39,7 +42,7 @@ class Body extends Component {
 
 // HEADER START 
 
-class Header extends Component {
+class HeaderMain extends Component {
   render(){
     return (
       <div className="header container-full">
@@ -86,11 +89,11 @@ class Tutorials extends Component {
         <h2>{this.props.title}</h2>
         <div className="row-2">
         <div className="column-2">
-        <h3>Tutorial 1</h3>
-          <button>View Code</button>
+        <h3>Internet Data</h3>
+          <LiveData/>
         </div>
         <div className="column-2">
-        <h3>Tutorial 2</h3>
+        <h3>To-Do App</h3>
           <button>View Code</button>
         </div>
         </div>
