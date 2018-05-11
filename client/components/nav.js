@@ -18,7 +18,9 @@ class Nav extends Component {
           <li><Link className="link-menu" to="/">Home</Link></li>
           <li><Link className="link-menu" to="/Documentation">Documentation</Link></li>
           <li><Link className="link-menu" to="/NewArticle">New article</Link></li>
-          <li><Link className="link-menu" to="/page3">Log in</Link></li>
+          <li><Link className="link-menu" to="/login">Log in</Link></li>
+          <li><Link className="link-menu" to="/ToDoList">To-do</Link></li>
+
 
           <div className="ui mini icon input search">
             <input type="text" placeholder="Search..." />

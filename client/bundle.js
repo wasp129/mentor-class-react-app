@@ -3835,8 +3835,17 @@ var Nav = function (_Component) {
             null,
             _react2.default.createElement(
               _reactRouter.Link,
-              { className: 'link-menu', to: '/page3' },
+              { className: 'link-menu', to: '/login' },
               'Log in'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { className: 'link-menu', to: '/ToDoList' },
+              'To-do'
             )
           ),
           _react2.default.createElement(
@@ -86707,6 +86716,39 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var app = {
+	title: 'To-do list',
+	subtitle: 'Put your life in our hands',
+	options: []
+};
+
+//ADD OPTION
+var onFormSubmit = function onFormSubmit(e) {
+	//avoid default full page refresh:
+	e.preventDefault();
+	//elements are index by the 'name' attribute
+	var option = e.target.elements.option.value;
+
+	if (option) {
+		app.options.push(option);
+		e.target.elements.option.value = '';
+		render();
+	}
+};
+
+//REMOVE ALL
+var onRemoveAll = function onRemoveAll() {
+	app.options = [];
+	render();
+};
+
+//GENERATE A RANDOM NUMBER
+var onMakeDecision = function onMakeDecision() {
+	var randomNum = Math.floor(Math.random() * app.options.length);
+	var option = app.options[randomNum];
+	alert(option);
+};
+
 var ToDoList = function (_Component) {
 	_inherits(ToDoList, _Component);
 
@@ -86721,37 +86763,58 @@ var ToDoList = function (_Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				'div',
-				{ className: 'docs-page' },
-				_react2.default.createElement(_Nav2.default, { title: 'React Guide' }),
-				_react2.default.createElement(Body, null),
-				_react2.default.createElement(_Footer2.default, { title: 'Mentor Class React JS 2018' })
+				null,
+				_react2.default.createElement(
+					'h1',
+					null,
+					app.title
+				),
+				app.subtitle && _react2.default.createElement(
+					'p',
+					null,
+					app.subtitle
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					app.options.length > 0 ? "Here are your options" : "No options"
+				),
+				_react2.default.createElement(
+					'button',
+					{ disabled: app.options.length === 0, onClick: onMakeDecision },
+					'What should I do?'
+				),
+				_react2.default.createElement(
+					'button',
+					{ onClick: onRemoveAll },
+					'Remove All'
+				),
+				_react2.default.createElement(
+					'ol',
+					null,
+					app.options.map(function (option) {
+						return _react2.default.createElement(
+							'li',
+							{ key: option },
+							option
+						);
+					})
+				),
+				_react2.default.createElement(
+					'form',
+					{ onSubmit: onFormSubmit },
+					_react2.default.createElement('input', { type: 'text', name: 'option' }),
+					_react2.default.createElement(
+						'button',
+						null,
+						'Add Option'
+					)
+				)
 			);
 		}
 	}]);
 
 	return ToDoList;
-}(_react.Component);
-
-//Body element
-
-
-var Body = function (_Component2) {
-	_inherits(Body, _Component2);
-
-	function Body() {
-		_classCallCheck(this, Body);
-
-		return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).apply(this, arguments));
-	}
-
-	_createClass(Body, [{
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement('div', { className: 'body' });
-		}
-	}]);
-
-	return Body;
 }(_react.Component);
 
 exports.default = ToDoList;
