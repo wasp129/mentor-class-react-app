@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react'
 
 const Overview = () => (
-  <Modal trigger={<Button>Open Overview</Button>} closeIcon>
+  <Modal trigger={<Button>Overview</Button>} closeIcon>
     <Modal.Header>Overview</Modal.Header>
     <Modal.Content image>
       <Image className='modal-img' src='images/ov-1.png' />
