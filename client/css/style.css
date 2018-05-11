@@ -132,6 +132,8 @@ button {
     transition-duration: 0.4s;
     cursor: pointer;
     margin-top: 1%;
+    margin: 10px;
+    border: 1px solid;
 }
 
 button:hover {
@@ -276,4 +278,23 @@ button:hover {
 
 .formContainer {
 	margin: 50px auto;
+}
+
+/* TO DO APP */
+
+.todo-container {
+	text-align: center;
+}
+
+input {
+	padding: 11px;
+	border-style: solid;
+    border: 1px solid #b1b1b1;
+    margin: 10px;
+}
+
+label {
+	color: rgba(0,0,0,.87);
+    font-weight: 700;
+    text-transform: none;
 }
