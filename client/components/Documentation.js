@@ -10,6 +10,7 @@ import Overview from './Articles/Overview';
 import Node from './Articles/Node';
 import NPM from './Articles/NPM';
 import JsxE6 from './Articles/JsxE6';
+import Babel from './Articles/Babel';
 
 // Dummy page for displaying how routing works
 class Documentation extends Component {
@@ -32,6 +33,7 @@ class Body extends Component {
         <Node/>
         <NPM/>
         <JsxE6/>
+        <Babel/>
       </div>
     )
   }

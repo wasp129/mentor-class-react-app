@@ -248,6 +248,11 @@ button:hover {
 	height: 86px;
 }
 
+.babel-large{
+	width: 200px;
+	height: auto;
+}
+
 code{
 	background-color: black;
 	color: white;
