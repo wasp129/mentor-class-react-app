@@ -14,6 +14,7 @@ import Babel from './Articles/Babel';
 import SemanticUI from './Articles/SemanticUI';
 import Components from './Articles/Components';
 import Props from './Articles/Props';
+import State from './Articles/State';
 
 // Dummy page for displaying how routing works
 
@@ -41,6 +42,7 @@ class Body extends Component {
         <SemanticUI/>
         <Components/>
         <Props/>
+        <State/>
       </div>
     )
   }

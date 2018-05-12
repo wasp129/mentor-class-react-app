@@ -30,22 +30,7 @@ const Components = () => (
         <p>However, elements can also represent user-defined components:</p>
         <Image className='codeSnippet' src='images/func4.jpg' />
         <br/>
-        <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”.</p>
-        <p>For example, this code renders “Hello, Sara” on the page:</p>
-        <Image className='codeSnippet' src='images/func5.jpg' />
-        <br/>
-          <br/>
-        <p> Let’s recap what happens in this example: </p>
-        <p>1. We call ReactDOM.render() with the &#60;Welcome name="Sara" /&#62; element. </p>
-        <p>2. React calls the Welcome component with &#123;name&#58; &#39;Sara &#39; &#125; as the props.</p>
-        <p>3. Our Welcome component returns a &#60;h1&#62;Hello, Sara&#60;/h1&#62; element as the result. </p>
-        <p>4. React DOM efficiently updates the DOM to match &#60;h1&#62;Hello, Sara&#60;/h1&#62; </p>
-        <blockquote>
-            <p><b> Note: Always start component names with a capital letter.</b></p>
-            <p>React treats components starting with lowercase letters as DOM tags. For example, &#60;div /&#62; represents an HTML div tag, but &#60;Welcome /&#62; represents a component and requires Welcome to be in scope.</p>
-            <p>You can read more about the reasoning behind this convention <a href='https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized'> here</a>. </p> 
-        </blockquote>
-          <br/>
+        <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”.</p>          <br/>
         <h3>Composing Components</h3>
         <p>Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components</p>
         <p>For example, we can create an App component that renders Welcome many times:</p>
