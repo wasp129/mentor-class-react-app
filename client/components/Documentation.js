@@ -9,6 +9,7 @@ import Footer from "./Footer.js";
 import Overview from './Articles/Overview';
 import Node from './Articles/Node';
 import NPM from './Articles/NPM';
+import JsxE6 from './Articles/JsxE6';
 
 // Dummy page for displaying how routing works
 class Documentation extends Component {
@@ -30,6 +31,7 @@ class Body extends Component {
         <Overview/>
         <Node/>
         <NPM/>
+        <JsxE6/>
       </div>
     )
   }

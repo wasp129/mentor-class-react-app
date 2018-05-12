@@ -255,3 +255,12 @@ code{
 	padding: 0.3%;
     line-height: 2em;
 }
+
+.h2-modal{
+	color: white;
+}
+
+.codeSnippet{
+	width: 600px;
+	align-content: center;
+}
