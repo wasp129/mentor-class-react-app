@@ -11,6 +11,7 @@ import Node from './Articles/Node';
 import NPM from './Articles/NPM';
 import JsxE6 from './Articles/JsxE6';
 import Babel from './Articles/Babel';
+import SemanticUI from './Articles/SemanticUI';
 
 // Dummy page for displaying how routing works
 class Documentation extends Component {
@@ -34,6 +35,7 @@ class Body extends Component {
         <NPM/>
         <JsxE6/>
         <Babel/>
+        <SemanticUI/>
       </div>
     )
   }
