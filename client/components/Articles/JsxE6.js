@@ -7,7 +7,7 @@ const JsxE6 = () => (
     <Modal.Content image scrolling>
       <Image size='large' src='images/jsx.png' wrapped />
       <Modal.Description>
-        <Header><h2 className='h2-modal'>JSX/ES5/ES6 ??!</h2></Header>
+        <Header><h2 className='h2-modal'>&#32;JSX/ES5/ES6 ??!</h2></Header>
         <p>ES6 (the ES stands for ECMAScript) is basically "regular JavaScript." The 5th update to JavaScript, ES5 was finalized in 2009. It has been supported by all major browsers for several years. Therefore, if you're written or seen any JavaScript in the recent past, chances are it was ES6.</p>
         <p>ES6 is a new version of JavaScript that adds some nice syntactical and functional additions. It was ﬁnalized in 2015. ES6 is almost fully supported (http://kangax.github.io/compat-table/es6/) by all major browsers. But it will be some time until older versions of web browsers are phased out of use. For instance, Internet Explorer 11 does not support ES6, but has about 11% of the browser market share. </p>
         <p>As we'll see, all of our React components have a render function that specifies that the HTML output of our React component will be. <b>JavaScript eXtension</b>, or more commonly JSX, is a React extension that allows us to write JavaScript that looks like HTML. </p>

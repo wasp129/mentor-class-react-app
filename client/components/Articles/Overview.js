@@ -7,7 +7,7 @@ const Overview = () => (
     <Modal.Content image scrolling>
       <Image className='modal-img' src='images/ov-1.png' />
       <Modal.Description>
-        <Header><h2 className='h2-modal'>Why React?</h2></Header>
+        <Header><h2 className='h2-modal'>&#32;Why React?</h2></Header>
         <p>
             ReactJS is an open-source JavaScript library which is used for building user interfaces specifically for single page applications. React allows developers to create large web applications which can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It is used for handling the view layer (or user interfaces) of web applications. This corresponds to view in the MVC template. 
             At the heart of all React applications are components. Broadly speaking, to write React apps we write components that correspond to various interface elements. We then organize these components inside higher-level components which define the structure of our application. The components correspond to interface elements. React also allows us to create reusable UI components. 

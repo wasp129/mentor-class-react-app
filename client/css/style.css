@@ -248,7 +248,7 @@ button:hover {
 	height: 86px;
 }
 
-.babel-large{
+.modalImg{
 	width: 200px;
 	height: auto;
 }
@@ -270,6 +270,3 @@ code{
 	align-content: center;
 }
 
-.list{
-	font-size: 1em;
-}

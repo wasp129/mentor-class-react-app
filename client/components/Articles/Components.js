@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react';
 
 
-const SemanticUI = () => (
-  <Modal trigger={<Button>SemanticUI</Button>} closeIcon>
+const Components = () => (
+  <Modal trigger={<Button>Components</Button>} closeIcon>
     <Modal.Header> UI Components Semantic React </Modal.Header>
     <Modal.Content image scrolling>
-      <Image className='modalImg' src='images/semantic.png' wrapped />
+      <Image className='modalImg' src='images/logo.svg' wrapped />
       <Modal.Description>
         <Header><h2 className='h2-modal'>&#32;Introduction to Semantic-UI-React integration</h2></Header>
         <p>Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience. </p> 
@@ -50,4 +50,4 @@ const SemanticUI = () => (
   </Modal>
 )
 
-export default SemanticUI
+export default Components

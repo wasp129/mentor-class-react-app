@@ -1178,7 +1178,7 @@ module.exports = {
 
 
 var bind = __webpack_require__(420);
-var isBuffer = __webpack_require__(837);
+var isBuffer = __webpack_require__(838);
 
 /*global toString:true*/
 
@@ -1560,75 +1560,6 @@ exports.default = function (arr) {
 
 /***/ }),
 /* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseToString = __webpack_require__(104);
-
-/**
- * Converts `value` to a string. An empty string is returned for `null`
- * and `undefined` values. The sign of `-0` is preserved.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- * @example
- *
- * _.toString(null);
- * // => ''
- *
- * _.toString(-0);
- * // => '-0'
- *
- * _.toString([1, 2, 3]);
- * // => '1,2,3'
- */
-function toString(value) {
-  return value == null ? '' : baseToString(value);
-}
-
-module.exports = toString;
-
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var React = __webpack_require__(1);
-var factory = __webpack_require__(438);
-
-if (typeof React === 'undefined') {
-  throw Error(
-    'create-react-class could not find the React object. If you are using script tags, ' +
-      'make sure that React is being loaded before create-react-class.'
-  );
-}
-
-// Hack to grab NoopUpdateQueue from isomorphic React
-var ReactNoopUpdateQueue = new React.Component().updater;
-
-module.exports = factory(
-  React.Component,
-  React.isValidElement,
-  ReactNoopUpdateQueue
-);
-
-
-/***/ }),
-/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2145,6 +2076,75 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseToString = __webpack_require__(104);
+
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  return value == null ? '' : baseToString(value);
+}
+
+module.exports = toString;
+
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var React = __webpack_require__(1);
+var factory = __webpack_require__(438);
+
+if (typeof React === 'undefined') {
+  throw Error(
+    'create-react-class could not find the React object. If you are using script tags, ' +
+      'make sure that React is being loaded before create-react-class.'
+  );
+}
+
+// Hack to grab NoopUpdateQueue from isomorphic React
+var ReactNoopUpdateQueue = new React.Component().updater;
+
+module.exports = factory(
+  React.Component,
+  React.isValidElement,
+  ReactNoopUpdateQueue
+);
 
 
 /***/ }),
@@ -4187,7 +4187,7 @@ module.exports = function (bitmap, value) {
 var isArray = __webpack_require__(14),
     isKey = __webpack_require__(170),
     stringToPath = __webpack_require__(260),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /**
  * Casts `value` to a path array if it's not one.
@@ -6962,7 +6962,7 @@ function mapAsync(array, work, callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
@@ -11398,7 +11398,7 @@ exports.default = Footer;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(28);
-var normalizeHeaderName = __webpack_require__(839);
+var normalizeHeaderName = __webpack_require__(840);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -11937,7 +11937,7 @@ function assignRouterState(router, _ref) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
@@ -12081,7 +12081,7 @@ var Link = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(33);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -13220,7 +13220,7 @@ module.exports = baseFindIndex;
 var baseClamp = __webpack_require__(270),
     baseToString = __webpack_require__(104),
     toInteger = __webpack_require__(37),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /**
  * Checks if `string` starts with the given target string.
@@ -17038,7 +17038,7 @@ MenuHeader.propTypes = process.env.NODE_ENV !== "production" ? {
 /***/ (function(module, exports, __webpack_require__) {
 
 var deburrLetter = __webpack_require__(728),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /** Used to match Latin Unicode letters (excluding mathematical operators). */
 var reLatin = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g;
@@ -24062,12 +24062,12 @@ module.exports = function bind(fn, thisArg) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(28);
-var settle = __webpack_require__(840);
-var buildURL = __webpack_require__(842);
-var parseHeaders = __webpack_require__(843);
-var isURLSameOrigin = __webpack_require__(844);
+var settle = __webpack_require__(841);
+var buildURL = __webpack_require__(843);
+var parseHeaders = __webpack_require__(844);
+var isURLSameOrigin = __webpack_require__(845);
 var createError = __webpack_require__(422);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(845);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(846);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -24164,7 +24164,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(846);
+      var cookies = __webpack_require__(847);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -24249,7 +24249,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(841);
+var enhanceError = __webpack_require__(842);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -24324,7 +24324,7 @@ var _App = __webpack_require__(436);
 
 var _App2 = _interopRequireDefault(_App);
 
-__webpack_require__(857);
+__webpack_require__(858);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42901,11 +42901,11 @@ var _Documentation = __webpack_require__(826);
 
 var _Documentation2 = _interopRequireDefault(_Documentation);
 
-var _page = __webpack_require__(833);
+var _page = __webpack_require__(834);
 
 var _page2 = _interopRequireDefault(_page);
 
-var _NewArticle = __webpack_require__(834);
+var _NewArticle = __webpack_require__(835);
 
 var _NewArticle2 = _interopRequireDefault(_NewArticle);
 
@@ -42956,7 +42956,7 @@ exports.default = App;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
@@ -45390,7 +45390,7 @@ function getRouteParams(route, params) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(237);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -45422,7 +45422,7 @@ var IndexLink = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_hoist_non_react_statics__ = __webpack_require__(449);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_hoist_non_react_statics__);
@@ -45571,7 +45571,7 @@ function withRouter(WrappedComponent, options) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(33);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -45627,7 +45627,7 @@ var IndexRedirect = __WEBPACK_IMPORTED_MODULE_0_create_react_class___default()({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(33);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -45684,7 +45684,7 @@ var IndexRoute = __WEBPACK_IMPORTED_MODULE_0_create_react_class___default()({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(33);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -46784,7 +46784,7 @@ var _Asset5 = __webpack_require__(247);
 
 var _Asset6 = _interopRequireDefault(_Asset5);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 var _Nav = __webpack_require__(228);
 
@@ -53859,7 +53859,7 @@ var arrayMap = __webpack_require__(35),
     isSymbol = __webpack_require__(55),
     stringToPath = __webpack_require__(260),
     toKey = __webpack_require__(59),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /**
  * Converts `value` to a property path array.
@@ -53908,7 +53908,7 @@ var baseToString = __webpack_require__(104),
     charsEndIndex = __webpack_require__(633),
     charsStartIndex = __webpack_require__(634),
     stringToArray = __webpack_require__(129),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /** Used to match leading and trailing whitespace. */
 var reTrim = /^\s+|\s+$/g;
@@ -58096,7 +58096,7 @@ var baseToString = __webpack_require__(104),
     isIterateeCall = __webpack_require__(73),
     isRegExp = __webpack_require__(715),
     stringToArray = __webpack_require__(129),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /** Used as references for the maximum length and index of an array. */
 var MAX_ARRAY_LENGTH = 4294967295;
@@ -58787,7 +58787,7 @@ module.exports = basePropertyOf;
 
 var asciiWords = __webpack_require__(731),
     hasUnicodeWord = __webpack_require__(732),
-    toString = __webpack_require__(32),
+    toString = __webpack_require__(33),
     unicodeWords = __webpack_require__(733);
 
 /**
@@ -58974,7 +58974,7 @@ module.exports = upperFirst;
 var castSlice = __webpack_require__(193),
     hasUnicode = __webpack_require__(130),
     stringToArray = __webpack_require__(129),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /**
  * Creates a function like `_.lowerFirst`.
@@ -61147,7 +61147,7 @@ module.exports = baseEvery;
 /* 752 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toString = __webpack_require__(32);
+var toString = __webpack_require__(33);
 
 /**
  * Used to match `RegExp`
@@ -65642,7 +65642,7 @@ module.exports = round;
 
 var toInteger = __webpack_require__(37),
     toNumber = __webpack_require__(115),
-    toString = __webpack_require__(32);
+    toString = __webpack_require__(33);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMin = Math.min;
@@ -67824,7 +67824,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 var _RealTimeData = __webpack_require__(824);
 
@@ -67858,7 +67858,7 @@ var LiveData = function LiveData() {
           _react2.default.createElement(
             'h2',
             null,
-            'Live Data'
+            ' Live Data'
           )
         ),
         _react2.default.createElement(_RealTimeData2.default, null)
@@ -68101,7 +68101,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(92);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 var _Nav = __webpack_require__(228);
 
@@ -68134,6 +68134,10 @@ var _Babel2 = _interopRequireDefault(_Babel);
 var _SemanticUI = __webpack_require__(832);
 
 var _SemanticUI2 = _interopRequireDefault(_SemanticUI);
+
+var _Components = __webpack_require__(833);
+
+var _Components2 = _interopRequireDefault(_Components);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68191,7 +68195,8 @@ var Body = function (_Component2) {
         _react2.default.createElement(_NPM2.default, null),
         _react2.default.createElement(_JsxE2.default, null),
         _react2.default.createElement(_Babel2.default, null),
-        _react2.default.createElement(_SemanticUI2.default, null)
+        _react2.default.createElement(_SemanticUI2.default, null),
+        _react2.default.createElement(_Components2.default, null)
       );
     }
   }]);
@@ -68216,7 +68221,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68246,7 +68251,7 @@ var Overview = function Overview() {
           _react2.default.createElement(
             'h2',
             { className: 'h2-modal' },
-            'Why React?'
+            ' Why React?'
           )
         ),
         _react2.default.createElement(
@@ -68400,7 +68405,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68430,7 +68435,7 @@ var Node = function Node() {
           _react2.default.createElement(
             'h2',
             { className: 'h2-modal' },
-            'Overview'
+            ' Overview'
           )
         ),
         _react2.default.createElement(
@@ -68518,7 +68523,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68548,7 +68553,7 @@ var NPM = function NPM() {
           _react2.default.createElement(
             'h2',
             { className: 'h2-modal' },
-            'The NPM Packages'
+            ' The NPM Packages'
           )
         ),
         _react2.default.createElement(
@@ -68567,7 +68572,7 @@ var NPM = function NPM() {
           'Why would you want to use an NPM package? In many cases, installing a package via the NPM command line is the fastest and most convenient to get the latest stable version of a module running in your environment, and is typically less work than cloning the source repository and building an installation from the repository. If you don\u2019t want the latest version you can specify a version number to NPM, which is especially useful when one package depends on another package and might break with a newer version of the dependency. '
         ),
         _react2.default.createElement(
-          'h2',
+          'h3',
           null,
           'Downloading and installing packages'
         ),
@@ -68636,7 +68641,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68666,7 +68671,7 @@ var JsxE6 = function JsxE6() {
           _react2.default.createElement(
             'h2',
             { className: 'h2-modal' },
-            'JSX/ES5/ES6 ??!'
+            ' JSX/ES5/ES6 ??!'
           )
         ),
         _react2.default.createElement(
@@ -68803,7 +68808,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68818,12 +68823,12 @@ var Babel = function Babel() {
     _react2.default.createElement(
       _semanticUiReact.Modal.Header,
       null,
-      'Babel '
+      '  Babel '
     ),
     _react2.default.createElement(
       _semanticUiReact.Modal.Content,
       { image: true, scrolling: true },
-      _react2.default.createElement(_semanticUiReact.Image, { className: 'babel-large', src: 'images/babel.png', wrapped: true }),
+      _react2.default.createElement(_semanticUiReact.Image, { className: 'modalImg', src: 'images/babel.png', wrapped: true }),
       _react2.default.createElement(
         _semanticUiReact.Modal.Description,
         null,
@@ -68833,7 +68838,7 @@ var Babel = function Babel() {
           _react2.default.createElement(
             'h2',
             { className: 'h2-modal' },
-            'What is Babel?'
+            ' What is Babel?'
           )
         ),
         _react2.default.createElement(
@@ -68940,9 +68945,12 @@ var Babel = function Babel() {
         _react2.default.createElement(
           'a',
           { href: 'https://babeljs.io/docs/setup/#installation' },
-          'Link to official Babel installation documentation'
+          _react2.default.createElement(
+            'h4',
+            null,
+            'Link to official Babel installation documentation'
+          )
         ),
-        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'p',
@@ -68955,6 +68963,7 @@ var Babel = function Babel() {
           ),
           ' to check what ES6 code compiles to.'
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null)
       )
     ),
@@ -68979,7 +68988,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(34);
+var _semanticUiReact = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68994,12 +69003,12 @@ var SemanticUI = function SemanticUI() {
     _react2.default.createElement(
       _semanticUiReact.Modal.Header,
       null,
-      'SemanticUI '
+      ' UI Components Semantic React '
     ),
     _react2.default.createElement(
       _semanticUiReact.Modal.Content,
       { image: true, scrolling: true },
-      _react2.default.createElement(_semanticUiReact.Image, { className: 'babel-large', src: 'images/babel.png', wrapped: true }),
+      _react2.default.createElement(_semanticUiReact.Image, { className: 'modalImg', src: 'images/semantic.png', wrapped: true }),
       _react2.default.createElement(
         _semanticUiReact.Modal.Description,
         null,
@@ -69009,56 +69018,115 @@ var SemanticUI = function SemanticUI() {
           _react2.default.createElement(
             'h2',
             { className: 'h2-modal' },
-            'What is Babel?'
+            ' Introduction to Semantic-UI-React integration'
           )
         ),
         _react2.default.createElement(
           'p',
           null,
-          'Babel is essentially an ECMAScript 6 to ECMAScript 5 transpiler that includes the ability to compile JSX into regular JavaScript. In order to use ES6, it\'s best if we transpile our ES6 JavaScript into ES5 JavaScript to support more browsers. '
+          'Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience. '
         ),
         _react2.default.createElement(
           'h3',
           null,
-          'Installation'
+          'Usage'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'Babel comes packaged as an node module. Installation, as you might expect, is via npm:'
+          'To start using the Semantic UI components in your project install the package via Npm:'
         ),
-        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'code',
           { className: 'code' },
-          'npm install --save-dev babel-cli'
+          ' npm install semantic-ui'
         ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'p',
           null,
-          'To check - if it shows output, it\u2019s successfully installed'
+          'Installing Semantic UI React provides the JavaScript for your components. You\'ll also need to include a stylesheet to provide the styling for your components. This is the typical pattern for component frameworks, such as Semantic UI or Bootstrap.'
         ),
-        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'code',
           { className: 'code' },
-          'npm install --save-dev babel-cli'
+          ' npm install semantic-ui-css'
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'p',
           null,
-          'Because we use this create-react-app tool we don\'t have to worry about it as it is been handled for us with the package installer.'
+          'After install, you\'ll need to include the minified CSS file in your index.js file:'
         ),
-        '        ',
+        _react2.default.createElement(
+          'code',
+          { className: 'code' },
+          'import \'semantic-ui-css/semantic.min.css\'; '
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Examples'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'For examples on how to import and use Semantic UI React components, click the code icon next to any example. Here are a few direct links:'
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/elements/button#button-example-button' },
+          '\u2022 Button'
+        ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'a',
-          { href: 'https://babeljs.io/docs/setup/#installation' },
-          'Link to official Babel installation documentation'
-        )
+          { href: 'https://react.semantic-ui.com/elements/list#list-example-list' },
+          '\u2022 List'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/views/card#card-example-card' },
+          '\u2022 Card'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/modules/modal#modal-example-modal' },
+          '\u2022 Modal'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/elements/image' },
+          '\u2022 Image'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/collections/menu' },
+          '\u2022 Menu'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/introduction' },
+          _react2.default.createElement(
+            'h4',
+            null,
+            'Link to the Official website'
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
       )
     ),
     _react2.default.createElement(_semanticUiReact.Modal.Actions, null)
@@ -69069,6 +69137,168 @@ exports.default = SemanticUI;
 
 /***/ }),
 /* 833 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _semanticUiReact = __webpack_require__(32);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Components = function Components() {
+  return _react2.default.createElement(
+    _semanticUiReact.Modal,
+    { trigger: _react2.default.createElement(
+        _semanticUiReact.Button,
+        null,
+        'Components'
+      ), closeIcon: true },
+    _react2.default.createElement(
+      _semanticUiReact.Modal.Header,
+      null,
+      ' UI Components Semantic React '
+    ),
+    _react2.default.createElement(
+      _semanticUiReact.Modal.Content,
+      { image: true, scrolling: true },
+      _react2.default.createElement(_semanticUiReact.Image, { className: 'modalImg', src: 'images/logo.svg', wrapped: true }),
+      _react2.default.createElement(
+        _semanticUiReact.Modal.Description,
+        null,
+        _react2.default.createElement(
+          _semanticUiReact.Header,
+          null,
+          _react2.default.createElement(
+            'h2',
+            { className: 'h2-modal' },
+            ' Introduction to Semantic-UI-React integration'
+          )
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience. '
+        ),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Usage'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'To start using the Semantic UI components in your project install the package via Npm:'
+        ),
+        _react2.default.createElement(
+          'code',
+          { className: 'code' },
+          ' npm install semantic-ui'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Installing Semantic UI React provides the JavaScript for your components. You\'ll also need to include a stylesheet to provide the styling for your components. This is the typical pattern for component frameworks, such as Semantic UI or Bootstrap.'
+        ),
+        _react2.default.createElement(
+          'code',
+          { className: 'code' },
+          ' npm install semantic-ui-css'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'After install, you\'ll need to include the minified CSS file in your index.js file:'
+        ),
+        _react2.default.createElement(
+          'code',
+          { className: 'code' },
+          'import \'semantic-ui-css/semantic.min.css\'; '
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Examples'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'For examples on how to import and use Semantic UI React components, click the code icon next to any example. Here are a few direct links:'
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/elements/button#button-example-button' },
+          '\u2022 Button'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/elements/list#list-example-list' },
+          '\u2022 List'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/views/card#card-example-card' },
+          '\u2022 Card'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/modules/modal#modal-example-modal' },
+          '\u2022 Modal'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/elements/image' },
+          '\u2022 Image'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/collections/menu' },
+          '\u2022 Menu'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { href: 'https://react.semantic-ui.com/introduction' },
+          _react2.default.createElement(
+            'h4',
+            null,
+            'Link to the Official website'
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
+      )
+    ),
+    _react2.default.createElement(_semanticUiReact.Modal.Actions, null)
+  );
+};
+
+exports.default = Components;
+
+/***/ }),
+/* 834 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69124,7 +69354,7 @@ var ThirdPage = function (_Component) {
 exports.default = ThirdPage;
 
 /***/ }),
-/* 834 */
+/* 835 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69140,7 +69370,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(835);
+var _axios = __webpack_require__(836);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -69160,7 +69390,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var querystring = __webpack_require__(854);
+var querystring = __webpack_require__(855);
 
 var NewArticle = function (_React$Component) {
     _inherits(NewArticle, _React$Component);
@@ -69303,13 +69533,13 @@ var NewArticle = function (_React$Component) {
 exports.default = NewArticle;
 
 /***/ }),
-/* 835 */
+/* 836 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(836);
+module.exports = __webpack_require__(837);
 
 /***/ }),
-/* 836 */
+/* 837 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69317,7 +69547,7 @@ module.exports = __webpack_require__(836);
 
 var utils = __webpack_require__(28);
 var bind = __webpack_require__(420);
-var Axios = __webpack_require__(838);
+var Axios = __webpack_require__(839);
 var defaults = __webpack_require__(230);
 
 /**
@@ -69352,14 +69582,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(424);
-axios.CancelToken = __webpack_require__(852);
+axios.CancelToken = __webpack_require__(853);
 axios.isCancel = __webpack_require__(423);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(853);
+axios.spread = __webpack_require__(854);
 
 module.exports = axios;
 
@@ -69368,7 +69598,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 837 */
+/* 838 */
 /***/ (function(module, exports) {
 
 /*!
@@ -69395,7 +69625,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 838 */
+/* 839 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69403,8 +69633,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(230);
 var utils = __webpack_require__(28);
-var InterceptorManager = __webpack_require__(847);
-var dispatchRequest = __webpack_require__(848);
+var InterceptorManager = __webpack_require__(848);
+var dispatchRequest = __webpack_require__(849);
 
 /**
  * Create a new instance of Axios
@@ -69481,7 +69711,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 839 */
+/* 840 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69500,7 +69730,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 840 */
+/* 841 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69533,7 +69763,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 841 */
+/* 842 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69561,7 +69791,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 842 */
+/* 843 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69634,7 +69864,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 843 */
+/* 844 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69694,7 +69924,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 844 */
+/* 845 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69769,7 +69999,7 @@ module.exports = (
 
 
 /***/ }),
-/* 845 */
+/* 846 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69812,7 +70042,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 846 */
+/* 847 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69872,7 +70102,7 @@ module.exports = (
 
 
 /***/ }),
-/* 847 */
+/* 848 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69931,18 +70161,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 848 */
+/* 849 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(28);
-var transformData = __webpack_require__(849);
+var transformData = __webpack_require__(850);
 var isCancel = __webpack_require__(423);
 var defaults = __webpack_require__(230);
-var isAbsoluteURL = __webpack_require__(850);
-var combineURLs = __webpack_require__(851);
+var isAbsoluteURL = __webpack_require__(851);
+var combineURLs = __webpack_require__(852);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -70024,7 +70254,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 849 */
+/* 850 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70051,7 +70281,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 850 */
+/* 851 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70072,7 +70302,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 851 */
+/* 852 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70093,7 +70323,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 852 */
+/* 853 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70157,7 +70387,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 853 */
+/* 854 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70191,18 +70421,18 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 854 */
+/* 855 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(855);
-exports.encode = exports.stringify = __webpack_require__(856);
+exports.decode = exports.parse = __webpack_require__(856);
+exports.encode = exports.stringify = __webpack_require__(857);
 
 
 /***/ }),
-/* 855 */
+/* 856 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70293,7 +70523,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 856 */
+/* 857 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70385,11 +70615,11 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 857 */
+/* 858 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(858);
+var content = __webpack_require__(859);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -70403,7 +70633,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(860)(content, options);
+var update = __webpack_require__(861)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -70435,21 +70665,21 @@ if(false) {
 }
 
 /***/ }),
-/* 858 */
+/* 859 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(859)(false);
+exports = module.exports = __webpack_require__(860)(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:300,400,500,600,700&subset=latin-ext);", ""]);
 
 // module
-exports.push([module.i, "h1, h2, h3, h4, h5, h6{\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tcolor:  #68D9FB;\r\n\tfont-weight: 300;\r\n}\r\n\r\np{\r\n\tfont-family: 'PT Sans', sans-serif;\r\n\tfont-size: 1em;\r\n    line-height: 1.4;\r\n\tcolor: #323232;\r\n}\r\n\r\nul{\r\n\tlist-style-type: none;\r\n}\r\n\r\nli {\r\n\tpadding-left: 20px;\r\n    padding-right: 20px;\r\n    font-size: 18px;\r\n}\r\n\r\n.nav { \r\n\tbackground-color: #010101;\r\n\tpadding: 1% 2%;\r\n\tdisplay: flex;\r\n}\r\n\r\n.logo-nav{\r\n\tdisplay: inline-block;\r\n\theight: 36px;\r\n\tmargin-top: 4px;\r\n}\r\n\r\n.logo-txt {\r\n    color: #68D9FB;\r\n    margin-left: -22px;\r\n    padding-top: 10px;\r\n    font-weight: 400;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.logo {\r\n\tanimation: logo-spin infinite 20s linear;\r\n\twidth: 213px;\r\n}\r\n\r\n@keyframes logo-spin {\r\n\tfrom { transform: rotate(0deg); }\r\n\tto { transform: rotate(360deg); }\r\n}\r\n\r\nimg {\r\n\twidth: 100px;\r\n}\r\n\r\n.headline {\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n\tcolor: white;\r\n}\r\n\r\nh1.headline{\r\n\tfont-size: 2.5em;\r\n}\r\n\r\n.nav-left{\r\n\tdisplay: flex;\r\n\tjustify-content: flex-start;\r\n\tpadding-top: 2px;\r\n\twidth: 10%;\r\n}\r\n\r\n.nav-right{\r\n\tdisplay: flex;\r\n\tflex-grow: 2;\r\n\tjustify-content: flex-end;\r\n\tpadding-right: 2%;\r\n}\r\n\r\n.link-menu {\r\n\tdisplay: block;\r\n\ttext-align: center;\r\n\tpadding: 0 3px;\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-size: 18px;\r\n}\r\n\r\n.link-menu:hover{\r\n\tcolor: #68D9FB;\r\n}\r\n\r\n.ui.inverted.menu {\r\n\tborder-radius: 0;\r\n}\r\n\r\n.search{\r\n\tpadding-left: 1%;\r\n\tmargin-top: -5px;\r\n}\r\n\r\n.container-full {\r\n\twidth: 100%;\r\n\tpadding: 0.5% 2%;\r\n\ttext-align: center;\r\n}\r\n\r\n/* HEADER - home page */\r\n\r\n.header {\r\n\tbackground-color: #262626;\r\n\tpadding: 2%;\r\n}\r\n\r\nbutton {\r\n\tbackground-color: #68D9FB;\r\n\tcolor: white;\r\n\tborder: none;\r\n\tpadding: 10px 25px;\r\n\ttext-align: center;\r\n\tfont-size: 20px;\r\n\t-webkit-transition-duration: 0.4s; /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n    margin-top: 1%;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: white;\r\n    color: #68D9FB;\r\n    border: 1px solid #68D9FB;\r\n    cursor: pointer;\r\n}\r\n\r\n/* OVERVIEW - home page */\r\n\r\n.overview {\r\n\tpadding: 0.5% 2% 3%;\r\n}\r\n\r\n.icons{\r\n\twidth: 60px;\r\n\ttransition: transform .2s;\r\n}\r\n\r\n.icons:hover {\r\n    -ms-transform: scale(1.1); /* IE 9 */\r\n    -webkit-transform: scale(1.1); /* Safari 3-8 */\r\n    transform: scale(1.1); \r\n}\r\n\r\n.row-3 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: center;\r\n\tpadding: 1% 7%;\r\n}\r\n\r\n.column-3 {\r\n\twidth: 35%;\r\n\tpadding: 40px 60px;\r\n\tline-height: 1.6;\r\n}\r\n\r\n/* TUTORIALS - home page */\r\n\r\n.tutorials {\r\n\tbackground-color:#323232;\r\n\tpadding: 1.5% 0 3%;\r\n}\r\n\r\n.row-2 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-around;\r\n\tmax-width: 1100px;\r\n\tmargin: auto;\r\n}\r\n\r\n.column-2 {\r\n\twidth: 40%;\r\n\tmargin: 30px 50px;\r\n\tpadding: 60px;\r\n\tbackground-color: white;\r\n}\r\n\r\n.examples{\r\n\tpadding: 2% 3%;\r\n}\r\n\r\n\r\n.sidebar{\r\n\twidth: 30%;\r\n\tpadding: 3% 1% 5% 4%;\r\n\r\n}\r\n\r\n.comment {\r\n\tborder-bottom: 1px solid black;\r\n\tmargin-bottom: 15px;\r\n}\r\n\r\n/* FOOTER */\r\n\r\n.footer{\r\n\tbackground-color: #010101;\r\n    width: 100%;\r\n\tpadding: 20px 0 20px 0;\r\n    text-align: center;\r\n    transition: 200ms;\r\n    \r\n}\r\n\r\n/* Animation */\r\n\r\n.switch-wrapper {\r\n  position: relative;\r\n}\r\n \r\n.switch-wrapper > div {\r\n  position: absolute;\r\n}\r\n\r\n@media only screen and (max-width: 1600px) {\r\n    .nav-left{\r\n\t\twidth: 19%;\r\n\t}\r\n\r\n\t.container-full{\r\n\t\tmax-width: 100%;\r\n\t}\r\n}\r\n\r\n/* Modals */\r\n\r\n\r\n.modal-img{\r\n\twidth: 150px;\r\n\theight: 86px;\r\n}\r\n\r\n.babel-large{\r\n\twidth: 200px;\r\n\theight: auto;\r\n}\r\n\r\ncode{\r\n\tbackground-color: black;\r\n\tcolor: white;\r\n\tfont-size: 0.9em;\r\n\tpadding: 0.3%;\r\n    line-height: 2em;\r\n}\r\n\r\n.h2-modal{\r\n\tcolor: white;\r\n}\r\n\r\n.codeSnippet{\r\n\twidth: 600px;\r\n\talign-content: center;\r\n}\r\n\r\n.list{\r\n\tfont-size: 1em;\r\n}", ""]);
+exports.push([module.i, "h1, h2, h3, h4, h5, h6{\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tcolor:  #68D9FB;\r\n\tfont-weight: 300;\r\n}\r\n\r\np{\r\n\tfont-family: 'PT Sans', sans-serif;\r\n\tfont-size: 1em;\r\n    line-height: 1.4;\r\n\tcolor: #323232;\r\n}\r\n\r\nul{\r\n\tlist-style-type: none;\r\n}\r\n\r\nli {\r\n\tpadding-left: 20px;\r\n    padding-right: 20px;\r\n    font-size: 18px;\r\n}\r\n\r\n.nav { \r\n\tbackground-color: #010101;\r\n\tpadding: 1% 2%;\r\n\tdisplay: flex;\r\n}\r\n\r\n.logo-nav{\r\n\tdisplay: inline-block;\r\n\theight: 36px;\r\n\tmargin-top: 4px;\r\n}\r\n\r\n.logo-txt {\r\n    color: #68D9FB;\r\n    margin-left: -22px;\r\n    padding-top: 10px;\r\n    font-weight: 400;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.logo {\r\n\tanimation: logo-spin infinite 20s linear;\r\n\twidth: 213px;\r\n}\r\n\r\n@keyframes logo-spin {\r\n\tfrom { transform: rotate(0deg); }\r\n\tto { transform: rotate(360deg); }\r\n}\r\n\r\nimg {\r\n\twidth: 100px;\r\n}\r\n\r\n.headline {\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n\tcolor: white;\r\n}\r\n\r\nh1.headline{\r\n\tfont-size: 2.5em;\r\n}\r\n\r\n.nav-left{\r\n\tdisplay: flex;\r\n\tjustify-content: flex-start;\r\n\tpadding-top: 2px;\r\n\twidth: 10%;\r\n}\r\n\r\n.nav-right{\r\n\tdisplay: flex;\r\n\tflex-grow: 2;\r\n\tjustify-content: flex-end;\r\n\tpadding-right: 2%;\r\n}\r\n\r\n.link-menu {\r\n\tdisplay: block;\r\n\ttext-align: center;\r\n\tpadding: 0 3px;\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-size: 18px;\r\n}\r\n\r\n.link-menu:hover{\r\n\tcolor: #68D9FB;\r\n}\r\n\r\n.ui.inverted.menu {\r\n\tborder-radius: 0;\r\n}\r\n\r\n.search{\r\n\tpadding-left: 1%;\r\n\tmargin-top: -5px;\r\n}\r\n\r\n.container-full {\r\n\twidth: 100%;\r\n\tpadding: 0.5% 2%;\r\n\ttext-align: center;\r\n}\r\n\r\n/* HEADER - home page */\r\n\r\n.header {\r\n\tbackground-color: #262626;\r\n\tpadding: 2%;\r\n}\r\n\r\nbutton {\r\n\tbackground-color: #68D9FB;\r\n\tcolor: white;\r\n\tborder: none;\r\n\tpadding: 10px 25px;\r\n\ttext-align: center;\r\n\tfont-size: 20px;\r\n\t-webkit-transition-duration: 0.4s; /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n    margin-top: 1%;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: white;\r\n    color: #68D9FB;\r\n    border: 1px solid #68D9FB;\r\n    cursor: pointer;\r\n}\r\n\r\n/* OVERVIEW - home page */\r\n\r\n.overview {\r\n\tpadding: 0.5% 2% 3%;\r\n}\r\n\r\n.icons{\r\n\twidth: 60px;\r\n\ttransition: transform .2s;\r\n}\r\n\r\n.icons:hover {\r\n    -ms-transform: scale(1.1); /* IE 9 */\r\n    -webkit-transform: scale(1.1); /* Safari 3-8 */\r\n    transform: scale(1.1); \r\n}\r\n\r\n.row-3 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: center;\r\n\tpadding: 1% 7%;\r\n}\r\n\r\n.column-3 {\r\n\twidth: 35%;\r\n\tpadding: 40px 60px;\r\n\tline-height: 1.6;\r\n}\r\n\r\n/* TUTORIALS - home page */\r\n\r\n.tutorials {\r\n\tbackground-color:#323232;\r\n\tpadding: 1.5% 0 3%;\r\n}\r\n\r\n.row-2 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-around;\r\n\tmax-width: 1100px;\r\n\tmargin: auto;\r\n}\r\n\r\n.column-2 {\r\n\twidth: 40%;\r\n\tmargin: 30px 50px;\r\n\tpadding: 60px;\r\n\tbackground-color: white;\r\n}\r\n\r\n.examples{\r\n\tpadding: 2% 3%;\r\n}\r\n\r\n\r\n.sidebar{\r\n\twidth: 30%;\r\n\tpadding: 3% 1% 5% 4%;\r\n\r\n}\r\n\r\n.comment {\r\n\tborder-bottom: 1px solid black;\r\n\tmargin-bottom: 15px;\r\n}\r\n\r\n/* FOOTER */\r\n\r\n.footer{\r\n\tbackground-color: #010101;\r\n    width: 100%;\r\n\tpadding: 20px 0 20px 0;\r\n    text-align: center;\r\n    transition: 200ms;\r\n    \r\n}\r\n\r\n/* Animation */\r\n\r\n.switch-wrapper {\r\n  position: relative;\r\n}\r\n \r\n.switch-wrapper > div {\r\n  position: absolute;\r\n}\r\n\r\n@media only screen and (max-width: 1600px) {\r\n    .nav-left{\r\n\t\twidth: 19%;\r\n\t}\r\n\r\n\t.container-full{\r\n\t\tmax-width: 100%;\r\n\t}\r\n}\r\n\r\n/* Modals */\r\n\r\n\r\n.modal-img{\r\n\twidth: 150px;\r\n\theight: 86px;\r\n}\r\n\r\n.modalImg{\r\n\twidth: 200px;\r\n\theight: auto;\r\n}\r\n\r\ncode{\r\n\tbackground-color: black;\r\n\tcolor: white;\r\n\tfont-size: 0.9em;\r\n\tpadding: 0.3%;\r\n    line-height: 2em;\r\n}\r\n\r\n.h2-modal{\r\n\tcolor: white;\r\n}\r\n\r\n.codeSnippet{\r\n\twidth: 600px;\r\n\talign-content: center;\r\n}\r\n\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 859 */
+/* 860 */
 /***/ (function(module, exports) {
 
 /*
@@ -70531,7 +70761,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 860 */
+/* 861 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -70597,7 +70827,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(861);
+var	fixUrls = __webpack_require__(862);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -70917,7 +71147,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 861 */
+/* 862 */
 /***/ (function(module, exports) {
 
 
