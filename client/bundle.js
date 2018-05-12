@@ -1178,7 +1178,7 @@ module.exports = {
 
 
 var bind = __webpack_require__(420);
-var isBuffer = __webpack_require__(838);
+var isBuffer = __webpack_require__(839);
 
 /*global toString:true*/
 
@@ -1482,84 +1482,6 @@ module.exports = {
 
 /***/ }),
 /* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var store = __webpack_require__(160)('wks');
-var uid = __webpack_require__(96);
-var Symbol = __webpack_require__(44).Symbol;
-var USE_SYMBOL = typeof Symbol == 'function';
-
-var $exports = module.exports = function (name) {
-  return store[name] || (store[name] =
-    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-};
-
-$exports.store = store;
-
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Symbol = __webpack_require__(56),
-    getRawTag = __webpack_require__(505),
-    objectToString = __webpack_require__(506);
-
-/** `Object#toString` result references. */
-var nullTag = '[object Null]',
-    undefinedTag = '[object Undefined]';
-
-/** Built-in value references. */
-var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
-
-/**
- * The base implementation of `getTag` without fallbacks for buggy environments.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */
-function baseGetTag(value) {
-  if (value == null) {
-    return value === undefined ? undefinedTag : nullTag;
-  }
-  return (symToStringTag && symToStringTag in Object(value))
-    ? getRawTag(value)
-    : objectToString(value);
-}
-
-module.exports = baseGetTag;
-
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _from = __webpack_require__(583);
-
-var _from2 = _interopRequireDefault(_from);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  } else {
-    return (0, _from2.default)(arr);
-  }
-};
-
-/***/ }),
-/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2077,6 +1999,84 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__(160)('wks');
+var uid = __webpack_require__(96);
+var Symbol = __webpack_require__(44).Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Symbol = __webpack_require__(56),
+    getRawTag = __webpack_require__(505),
+    objectToString = __webpack_require__(506);
+
+/** `Object#toString` result references. */
+var nullTag = '[object Null]',
+    undefinedTag = '[object Undefined]';
+
+/** Built-in value references. */
+var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return (symToStringTag && symToStringTag in Object(value))
+    ? getRawTag(value)
+    : objectToString(value);
+}
+
+module.exports = baseGetTag;
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _from = __webpack_require__(583);
+
+var _from2 = _interopRequireDefault(_from);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  } else {
+    return (0, _from2.default)(arr);
+  }
+};
 
 /***/ }),
 /* 33 */
@@ -2923,7 +2923,7 @@ var DataView = __webpack_require__(557),
     Promise = __webpack_require__(558),
     Set = __webpack_require__(282),
     WeakMap = __webpack_require__(283),
-    baseGetTag = __webpack_require__(30),
+    baseGetTag = __webpack_require__(31),
     toSource = __webpack_require__(262);
 
 /** `Object#toString` result references. */
@@ -3164,7 +3164,7 @@ module.exports = function (it) {
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isObjectLike = __webpack_require__(17);
 
 /** `Object#toString` result references. */
@@ -3234,7 +3234,7 @@ module.exports = getNative;
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isObject = __webpack_require__(22);
 
 /** `Object#toString` result references. */
@@ -5885,7 +5885,7 @@ module.exports = getPrototype;
 /* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     getPrototype = __webpack_require__(127),
     isObjectLike = __webpack_require__(17);
 
@@ -6009,7 +6009,7 @@ module.exports = hasUnicode;
 /* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isArray = __webpack_require__(14),
     isObjectLike = __webpack_require__(17);
 
@@ -7742,7 +7742,7 @@ module.exports = Object.create || function create(O, Properties) {
 
 var def = __webpack_require__(45).f;
 var has = __webpack_require__(53);
-var TAG = __webpack_require__(29)('toStringTag');
+var TAG = __webpack_require__(30)('toStringTag');
 
 module.exports = function (it, tag, stat) {
   if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
@@ -7757,7 +7757,7 @@ __webpack_require__(483);
 var global = __webpack_require__(44);
 var hide = __webpack_require__(68);
 var Iterators = __webpack_require__(72);
-var TO_STRING_TAG = __webpack_require__(29)('toStringTag');
+var TO_STRING_TAG = __webpack_require__(30)('toStringTag');
 
 var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
   'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
@@ -7778,7 +7778,7 @@ for (var i = 0; i < DOMIterables.length; i++) {
 /* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.f = __webpack_require__(29);
+exports.f = __webpack_require__(30);
 
 
 /***/ }),
@@ -8597,7 +8597,7 @@ module.exports = uniq;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__);
@@ -11398,7 +11398,7 @@ exports.default = Footer;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(28);
-var normalizeHeaderName = __webpack_require__(840);
+var normalizeHeaderName = __webpack_require__(841);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -12681,7 +12681,7 @@ var Iterators = __webpack_require__(72);
 var $iterCreate = __webpack_require__(480);
 var setToStringTag = __webpack_require__(165);
 var getPrototypeOf = __webpack_require__(256);
-var ITERATOR = __webpack_require__(29)('iterator');
+var ITERATOR = __webpack_require__(30)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
 var KEYS = 'keys';
@@ -13809,7 +13809,7 @@ module.exports = castFunction;
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
 var cof = __webpack_require__(156);
-var TAG = __webpack_require__(29)('toStringTag');
+var TAG = __webpack_require__(30)('toStringTag');
 // ES3 wrong here
 var ARG = cof(function () { return arguments; }()) == 'Arguments';
 
@@ -13837,7 +13837,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var classof = __webpack_require__(289);
-var ITERATOR = __webpack_require__(29)('iterator');
+var ITERATOR = __webpack_require__(30)('iterator');
 var Iterators = __webpack_require__(72);
 module.exports = __webpack_require__(20).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
@@ -15078,7 +15078,7 @@ module.exports = baseUniq;
 /* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isObjectLike = __webpack_require__(17);
 
 /** `Object#toString` result references. */
@@ -18962,7 +18962,7 @@ FormDropdown.defaultProps = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__);
@@ -19267,7 +19267,7 @@ FormTextArea.defaultProps = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__);
@@ -19393,7 +19393,7 @@ Grid.propTypes = process.env.NODE_ENV !== "production" ? {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__);
@@ -21014,7 +21014,7 @@ StepContent.create = Object(__WEBPACK_IMPORTED_MODULE_4__lib__["m" /* createShor
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__);
@@ -21154,7 +21154,7 @@ StepGroup.propTypes = process.env.NODE_ENV !== "production" ? {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
@@ -24062,12 +24062,12 @@ module.exports = function bind(fn, thisArg) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(28);
-var settle = __webpack_require__(841);
-var buildURL = __webpack_require__(843);
-var parseHeaders = __webpack_require__(844);
-var isURLSameOrigin = __webpack_require__(845);
+var settle = __webpack_require__(842);
+var buildURL = __webpack_require__(844);
+var parseHeaders = __webpack_require__(845);
+var isURLSameOrigin = __webpack_require__(846);
 var createError = __webpack_require__(422);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(846);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(847);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -24164,7 +24164,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(847);
+      var cookies = __webpack_require__(848);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -24249,7 +24249,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(842);
+var enhanceError = __webpack_require__(843);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -24324,7 +24324,7 @@ var _App = __webpack_require__(436);
 
 var _App2 = _interopRequireDefault(_App);
 
-__webpack_require__(858);
+__webpack_require__(859);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42901,11 +42901,11 @@ var _Documentation = __webpack_require__(826);
 
 var _Documentation2 = _interopRequireDefault(_Documentation);
 
-var _page = __webpack_require__(834);
+var _page = __webpack_require__(835);
 
 var _page2 = _interopRequireDefault(_page);
 
-var _NewArticle = __webpack_require__(835);
+var _NewArticle = __webpack_require__(836);
 
 var _NewArticle2 = _interopRequireDefault(_NewArticle);
 
@@ -46784,7 +46784,7 @@ var _Asset5 = __webpack_require__(247);
 
 var _Asset6 = _interopRequireDefault(_Asset5);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 var _Nav = __webpack_require__(228);
 
@@ -47480,7 +47480,7 @@ var setToStringTag = __webpack_require__(165);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(68)(IteratorPrototype, __webpack_require__(29)('iterator'), function () { return this; });
+__webpack_require__(68)(IteratorPrototype, __webpack_require__(30)('iterator'), function () { return this; });
 
 module.exports = function (Constructor, NAME, next) {
   Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
@@ -47606,7 +47606,7 @@ var $fails = __webpack_require__(70);
 var shared = __webpack_require__(160);
 var setToStringTag = __webpack_require__(165);
 var uid = __webpack_require__(96);
-var wks = __webpack_require__(29);
+var wks = __webpack_require__(30);
 var wksExt = __webpack_require__(167);
 var wksDefine = __webpack_require__(168);
 var enumKeys = __webpack_require__(490);
@@ -48783,7 +48783,7 @@ module.exports = mapCacheSet;
 /* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isObjectLike = __webpack_require__(17);
 
 /** `Object#toString` result references. */
@@ -49434,7 +49434,7 @@ module.exports = stubFalse;
 /* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isLength = __webpack_require__(173),
     isObjectLike = __webpack_require__(17);
 
@@ -50499,7 +50499,7 @@ module.exports = __webpack_require__(570);
 /***/ (function(module, exports, __webpack_require__) {
 
 var classof = __webpack_require__(289);
-var ITERATOR = __webpack_require__(29)('iterator');
+var ITERATOR = __webpack_require__(30)('iterator');
 var Iterators = __webpack_require__(72);
 module.exports = __webpack_require__(20).isIterable = function (it) {
   var O = Object(it);
@@ -50951,7 +50951,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "itemShorthand", function() { return itemShorthand; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "collectionShorthand", function() { return collectionShorthand; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deprecate", function() { return deprecate; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_fp_difference__ = __webpack_require__(590);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_fp_difference___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_fp_difference__);
@@ -51426,7 +51426,7 @@ module.exports = function (iterator, fn, value, entries) {
 
 // check on default Array iterator
 var Iterators = __webpack_require__(72);
-var ITERATOR = __webpack_require__(29)('iterator');
+var ITERATOR = __webpack_require__(30)('iterator');
 var ArrayProto = Array.prototype;
 
 module.exports = function (it) {
@@ -51453,7 +51453,7 @@ module.exports = function (object, index, value) {
 /* 589 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ITERATOR = __webpack_require__(29)('iterator');
+var ITERATOR = __webpack_require__(30)('iterator');
 var SAFE_CLOSING = false;
 
 try {
@@ -53651,7 +53651,7 @@ module.exports = baseIsSet;
 /* 625 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isObjectLike = __webpack_require__(17),
     isPlainObject = __webpack_require__(128);
 
@@ -54883,7 +54883,7 @@ var instance = new EventStack();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
@@ -55301,7 +55301,7 @@ var createHTMLParagraph = createShorthandFactory('p', function (val) {
 /* 670 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isObjectLike = __webpack_require__(17);
 
 /** `Object#toString` result references. */
@@ -55732,7 +55732,7 @@ module.exports = func;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__itemFactories__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rangeFactories__ = __webpack_require__(688);
@@ -55770,7 +55770,7 @@ var createPaginationItems = function createPaginationItems(rawOptions) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return createSimpleRange; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createComplexRange; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_range__ = __webpack_require__(689);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_range___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_range__);
@@ -56042,7 +56042,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ICONS_AND_ALIASES", function() { return ICONS_AND_ALIASES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPONENT_CONTEXT_SPECIFIC_ICONS", function() { return COMPONENT_CONTEXT_SPECIFIC_ICONS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_ICONS_IN_ALL_CONTEXTS", function() { return ALL_ICONS_IN_ALL_CONTEXTS; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_values__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_values___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash_values__);
@@ -58181,7 +58181,7 @@ module.exports = isRegExp;
 /* 716 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(30),
+var baseGetTag = __webpack_require__(31),
     isObjectLike = __webpack_require__(17);
 
 /** `Object#toString` result references. */
@@ -67824,7 +67824,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 var _RealTimeData = __webpack_require__(824);
 
@@ -68101,7 +68101,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(92);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 var _Nav = __webpack_require__(228);
 
@@ -68139,6 +68139,10 @@ var _Components = __webpack_require__(833);
 
 var _Components2 = _interopRequireDefault(_Components);
 
+var _Props = __webpack_require__(834);
+
+var _Props2 = _interopRequireDefault(_Props);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -68148,6 +68152,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // Dummy page for displaying how routing works
+
 var Documentation = function (_Component) {
   _inherits(Documentation, _Component);
 
@@ -68196,7 +68201,8 @@ var Body = function (_Component2) {
         _react2.default.createElement(_JsxE2.default, null),
         _react2.default.createElement(_Babel2.default, null),
         _react2.default.createElement(_SemanticUI2.default, null),
-        _react2.default.createElement(_Components2.default, null)
+        _react2.default.createElement(_Components2.default, null),
+        _react2.default.createElement(_Props2.default, null)
       );
     }
   }]);
@@ -68221,7 +68227,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68405,7 +68411,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68523,7 +68529,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68641,7 +68647,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68808,7 +68814,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68988,7 +68994,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69150,7 +69156,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _semanticUiReact = __webpack_require__(32);
+var _semanticUiReact = __webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69165,7 +69171,7 @@ var Components = function Components() {
     _react2.default.createElement(
       _semanticUiReact.Modal.Header,
       null,
-      ' UI Components Semantic React '
+      'React Components'
     ),
     _react2.default.createElement(
       _semanticUiReact.Modal.Content,
@@ -69180,112 +69186,209 @@ var Components = function Components() {
           _react2.default.createElement(
             'h2',
             { className: 'h2-modal' },
-            ' Introduction to Semantic-UI-React integration'
+            ' Introduction to React Components and Props'
           )
         ),
         _react2.default.createElement(
           'p',
           null,
-          'Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience. '
+          'React Component is an independent, reusable code and it contains HTML  + Javascript. Components data will be stored in component\'s State. This state can be modified based on user action or other action. When a component state is changed React will re-render the component to the browser.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called \u201Cprops\u201D) and return React elements describing what should appear on the screen.'
         ),
         _react2.default.createElement(
           'h3',
           null,
-          'Usage'
+          'Functional and Class Components'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'To start using the Semantic UI components in your project install the package via Npm:'
+          'The simplest way to define a component is to write a JavaScript function:'
         ),
-        _react2.default.createElement(
-          'code',
-          { className: 'code' },
-          ' npm install semantic-ui'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func1.jpg' }),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'p',
           null,
-          'Installing Semantic UI React provides the JavaScript for your components. You\'ll also need to include a stylesheet to provide the styling for your components. This is the typical pattern for component frameworks, such as Semantic UI or Bootstrap.'
-        ),
-        _react2.default.createElement(
-          'code',
-          { className: 'code' },
-          ' npm install semantic-ui-css'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'p',
-          null,
-          'After install, you\'ll need to include the minified CSS file in your index.js file:'
-        ),
-        _react2.default.createElement(
-          'code',
-          { className: 'code' },
-          'import \'semantic-ui-css/semantic.min.css\'; '
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'h3',
-          null,
-          'Examples'
+          'This function is a valid React component because it accepts a single \u201Cprops\u201D (which stands for properties) object argument with data and returns a React element. We call such components \u201Cfunctional\u201D because they are literally JavaScript functions.'
         ),
         _react2.default.createElement(
           'p',
           null,
-          'For examples on how to import and use Semantic UI React components, click the code icon next to any example. Here are a few direct links:'
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://react.semantic-ui.com/elements/button#button-example-button' },
-          '\u2022 Button'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://react.semantic-ui.com/elements/list#list-example-list' },
-          '\u2022 List'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://react.semantic-ui.com/views/card#card-example-card' },
-          '\u2022 Card'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://react.semantic-ui.com/modules/modal#modal-example-modal' },
-          '\u2022 Modal'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://react.semantic-ui.com/elements/image' },
-          '\u2022 Image'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://react.semantic-ui.com/collections/menu' },
-          '\u2022 Menu'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://react.semantic-ui.com/introduction' },
+          'You can also use an ',
           _react2.default.createElement(
-            'h4',
+            'a',
+            { href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes' },
+            'ES6 class'
+          ),
+          ' to define a component:'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func2.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'The above two components are equivalent from React\u2019s point of view.'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Rendering a Component'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'React elements can represent DOM tags:'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func3.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'However, elements can also represent user-defined components:'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func4.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object \u201Cprops\u201D.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'For example, this code renders \u201CHello, Sara\u201D on the page:'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func5.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          ' Let\u2019s recap what happens in this example: '
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          '1. We call ReactDOM.render() with the <Welcome name="Sara" /> element. '
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          '2. React calls the Welcome component with {name: \'Sara \' } as the props.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          '3. Our Welcome component returns a <h1>Hello, Sara</h1> element as the result. '
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          '4. React DOM efficiently updates the DOM to match <h1>Hello, Sara</h1> '
+        ),
+        _react2.default.createElement(
+          'blockquote',
+          null,
+          _react2.default.createElement(
+            'p',
             null,
-            'Link to the Official website'
+            _react2.default.createElement(
+              'b',
+              null,
+              ' Note: Always start component names with a capital letter.'
+            )
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'React treats components starting with lowercase letters as DOM tags. For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'You can read more about the reasoning behind this convention ',
+            _react2.default.createElement(
+              'a',
+              { href: 'https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized' },
+              ' here'
+            ),
+            '. '
           )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Composing Components'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'For example, we can create an App component that renders Welcome many times:'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func6.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Typically, new React apps have a single App component at the very top. To write React apps, we write components that correspond to interface elements. As we said before, when a component renders, it outputs the virtual representation of the HTML elements this component outputs.'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func7.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'All React components require at least a render() function. This render() function is expected to return a virtual DOM representation of the browser DOM element(s).'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'One of the requirements of JSX, ',
+          _react2.default.createElement(
+            'b',
+            null,
+            'each component can only return one element'
+          ),
+          '. That is why you will need wrap all your HTML markup into one containing HTML element eg. div or ul.'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func8.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'One of the most interesting things React allows you to do is to use your custom React components inside another concept. '
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func9.jpg' }),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/func10.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'This way you are able to compose more complex and useful user interface for your users. This feature also allow us to reuse component inside each other which encourages code reuse & easy to maintain code base.'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'When a component is nested inside another component, it\'s called a child component. A component can have multiple children components. The component that uses a child component is called it\'s parent component.'
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null)
@@ -69299,6 +69402,139 @@ exports.default = Components;
 
 /***/ }),
 /* 834 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _semanticUiReact = __webpack_require__(29);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Props = function Props() {
+  return _react2.default.createElement(
+    _semanticUiReact.Modal,
+    { trigger: _react2.default.createElement(
+        _semanticUiReact.Button,
+        null,
+        'Props'
+      ), closeIcon: true },
+    _react2.default.createElement(
+      _semanticUiReact.Modal.Header,
+      null,
+      'Understanding Props in React'
+    ),
+    _react2.default.createElement(
+      _semanticUiReact.Modal.Content,
+      { image: true, scrolling: true },
+      _react2.default.createElement(_semanticUiReact.Image, { className: 'modalImg', src: 'images/logo.svg', wrapped: true }),
+      _react2.default.createElement(
+        _semanticUiReact.Modal.Description,
+        null,
+        _react2.default.createElement(
+          _semanticUiReact.Header,
+          null,
+          _react2.default.createElement(
+            'h2',
+            { className: 'h2-modal' },
+            ' Props are Read-Only'
+          )
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'This simply is shorthand for properties. When you use any React component you can pass it some input data that you want it to work with. These properties are called "props" and are read-only values that define the basic starting point for a component.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Thinking in React documentation, props are best explained as "a way of passing data from parent to child." That\'s it. In essence, props are just a communication channel between components, always moving from top (parent) to bottom (child). Props are similar to arguments for pure functions argument.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          '\u2022 Props are used to pass data from parent to child or by the component itself. They are immutable and thus will not be changed. '
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          '\u2022 Props make components reusable by giving components the ability to receive data from the parent component in the form of props.'
+        ),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Props & State'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'React uses a render method which you have seen above to hold component views. Component\u2019s render method return JSX which then use to create real HTML output which will be rendered in the browser.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'The interesting Thing about render method is that it runs every time when your component State or Props updates. This process ensures whenever you change your data using application logic component\u2019s view update to show new data to users. By using this simple mechanism React allows us to build powerful and almost easy to manage UI components.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Whether you declare a component as a function or a class, it must never modify its own props. Consider this sum function:'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/prop1.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Such functions are called \u201Cpure\u201D because they do not attempt to change their inputs, and always return the same result for the same inputs. '
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'In contrast, this function is impure because it changes its own input:'
+        ),
+        _react2.default.createElement(_semanticUiReact.Image, { className: 'codeSnippet', src: 'images/prop2.jpg' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'React is pretty flexible but it has a single strict rule:'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          _react2.default.createElement(
+            'b',
+            null,
+            'All React components must act like pure functions with respect to their props.'
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Of course, application UIs are dynamic and change over time. In the next section, we will introduce a new concept of \u201Cstate\u201D. State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
+      )
+    ),
+    _react2.default.createElement(_semanticUiReact.Modal.Actions, null)
+  );
+};
+
+exports.default = Props;
+
+/***/ }),
+/* 835 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69354,7 +69590,7 @@ var ThirdPage = function (_Component) {
 exports.default = ThirdPage;
 
 /***/ }),
-/* 835 */
+/* 836 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69370,7 +69606,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(836);
+var _axios = __webpack_require__(837);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -69390,7 +69626,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var querystring = __webpack_require__(855);
+var querystring = __webpack_require__(856);
 
 var NewArticle = function (_React$Component) {
     _inherits(NewArticle, _React$Component);
@@ -69533,13 +69769,13 @@ var NewArticle = function (_React$Component) {
 exports.default = NewArticle;
 
 /***/ }),
-/* 836 */
+/* 837 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(837);
+module.exports = __webpack_require__(838);
 
 /***/ }),
-/* 837 */
+/* 838 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69547,7 +69783,7 @@ module.exports = __webpack_require__(837);
 
 var utils = __webpack_require__(28);
 var bind = __webpack_require__(420);
-var Axios = __webpack_require__(839);
+var Axios = __webpack_require__(840);
 var defaults = __webpack_require__(230);
 
 /**
@@ -69582,14 +69818,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(424);
-axios.CancelToken = __webpack_require__(853);
+axios.CancelToken = __webpack_require__(854);
 axios.isCancel = __webpack_require__(423);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(854);
+axios.spread = __webpack_require__(855);
 
 module.exports = axios;
 
@@ -69598,7 +69834,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 838 */
+/* 839 */
 /***/ (function(module, exports) {
 
 /*!
@@ -69625,7 +69861,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 839 */
+/* 840 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69633,8 +69869,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(230);
 var utils = __webpack_require__(28);
-var InterceptorManager = __webpack_require__(848);
-var dispatchRequest = __webpack_require__(849);
+var InterceptorManager = __webpack_require__(849);
+var dispatchRequest = __webpack_require__(850);
 
 /**
  * Create a new instance of Axios
@@ -69711,7 +69947,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 840 */
+/* 841 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69730,7 +69966,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 841 */
+/* 842 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69763,7 +69999,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 842 */
+/* 843 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69791,7 +70027,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 843 */
+/* 844 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69864,7 +70100,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 844 */
+/* 845 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69924,7 +70160,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 845 */
+/* 846 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69999,7 +70235,7 @@ module.exports = (
 
 
 /***/ }),
-/* 846 */
+/* 847 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70042,7 +70278,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 847 */
+/* 848 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70102,7 +70338,7 @@ module.exports = (
 
 
 /***/ }),
-/* 848 */
+/* 849 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70161,18 +70397,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 849 */
+/* 850 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(28);
-var transformData = __webpack_require__(850);
+var transformData = __webpack_require__(851);
 var isCancel = __webpack_require__(423);
 var defaults = __webpack_require__(230);
-var isAbsoluteURL = __webpack_require__(851);
-var combineURLs = __webpack_require__(852);
+var isAbsoluteURL = __webpack_require__(852);
+var combineURLs = __webpack_require__(853);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -70254,7 +70490,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 850 */
+/* 851 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70281,7 +70517,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 851 */
+/* 852 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70302,7 +70538,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 852 */
+/* 853 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70323,7 +70559,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 853 */
+/* 854 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70387,7 +70623,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 854 */
+/* 855 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70421,18 +70657,18 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 855 */
+/* 856 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(856);
-exports.encode = exports.stringify = __webpack_require__(857);
+exports.decode = exports.parse = __webpack_require__(857);
+exports.encode = exports.stringify = __webpack_require__(858);
 
 
 /***/ }),
-/* 856 */
+/* 857 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70523,7 +70759,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 857 */
+/* 858 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70615,11 +70851,11 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 858 */
+/* 859 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(859);
+var content = __webpack_require__(860);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -70633,7 +70869,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(861)(content, options);
+var update = __webpack_require__(862)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -70665,21 +70901,21 @@ if(false) {
 }
 
 /***/ }),
-/* 859 */
+/* 860 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(860)(false);
+exports = module.exports = __webpack_require__(861)(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:300,400,500,600,700&subset=latin-ext);", ""]);
 
 // module
-exports.push([module.i, "h1, h2, h3, h4, h5, h6{\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tcolor:  #68D9FB;\r\n\tfont-weight: 300;\r\n}\r\n\r\np{\r\n\tfont-family: 'PT Sans', sans-serif;\r\n\tfont-size: 1em;\r\n    line-height: 1.4;\r\n\tcolor: #323232;\r\n}\r\n\r\nul{\r\n\tlist-style-type: none;\r\n}\r\n\r\nli {\r\n\tpadding-left: 20px;\r\n    padding-right: 20px;\r\n    font-size: 18px;\r\n}\r\n\r\n.nav { \r\n\tbackground-color: #010101;\r\n\tpadding: 1% 2%;\r\n\tdisplay: flex;\r\n}\r\n\r\n.logo-nav{\r\n\tdisplay: inline-block;\r\n\theight: 36px;\r\n\tmargin-top: 4px;\r\n}\r\n\r\n.logo-txt {\r\n    color: #68D9FB;\r\n    margin-left: -22px;\r\n    padding-top: 10px;\r\n    font-weight: 400;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.logo {\r\n\tanimation: logo-spin infinite 20s linear;\r\n\twidth: 213px;\r\n}\r\n\r\n@keyframes logo-spin {\r\n\tfrom { transform: rotate(0deg); }\r\n\tto { transform: rotate(360deg); }\r\n}\r\n\r\nimg {\r\n\twidth: 100px;\r\n}\r\n\r\n.headline {\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n\tcolor: white;\r\n}\r\n\r\nh1.headline{\r\n\tfont-size: 2.5em;\r\n}\r\n\r\n.nav-left{\r\n\tdisplay: flex;\r\n\tjustify-content: flex-start;\r\n\tpadding-top: 2px;\r\n\twidth: 10%;\r\n}\r\n\r\n.nav-right{\r\n\tdisplay: flex;\r\n\tflex-grow: 2;\r\n\tjustify-content: flex-end;\r\n\tpadding-right: 2%;\r\n}\r\n\r\n.link-menu {\r\n\tdisplay: block;\r\n\ttext-align: center;\r\n\tpadding: 0 3px;\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-size: 18px;\r\n}\r\n\r\n.link-menu:hover{\r\n\tcolor: #68D9FB;\r\n}\r\n\r\n.ui.inverted.menu {\r\n\tborder-radius: 0;\r\n}\r\n\r\n.search{\r\n\tpadding-left: 1%;\r\n\tmargin-top: -5px;\r\n}\r\n\r\n.container-full {\r\n\twidth: 100%;\r\n\tpadding: 0.5% 2%;\r\n\ttext-align: center;\r\n}\r\n\r\n/* HEADER - home page */\r\n\r\n.header {\r\n\tbackground-color: #262626;\r\n\tpadding: 2%;\r\n}\r\n\r\nbutton {\r\n\tbackground-color: #68D9FB;\r\n\tcolor: white;\r\n\tborder: none;\r\n\tpadding: 10px 25px;\r\n\ttext-align: center;\r\n\tfont-size: 20px;\r\n\t-webkit-transition-duration: 0.4s; /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n    margin-top: 1%;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: white;\r\n    color: #68D9FB;\r\n    border: 1px solid #68D9FB;\r\n    cursor: pointer;\r\n}\r\n\r\n/* OVERVIEW - home page */\r\n\r\n.overview {\r\n\tpadding: 0.5% 2% 3%;\r\n}\r\n\r\n.icons{\r\n\twidth: 60px;\r\n\ttransition: transform .2s;\r\n}\r\n\r\n.icons:hover {\r\n    -ms-transform: scale(1.1); /* IE 9 */\r\n    -webkit-transform: scale(1.1); /* Safari 3-8 */\r\n    transform: scale(1.1); \r\n}\r\n\r\n.row-3 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: center;\r\n\tpadding: 1% 7%;\r\n}\r\n\r\n.column-3 {\r\n\twidth: 35%;\r\n\tpadding: 40px 60px;\r\n\tline-height: 1.6;\r\n}\r\n\r\n/* TUTORIALS - home page */\r\n\r\n.tutorials {\r\n\tbackground-color:#323232;\r\n\tpadding: 1.5% 0 3%;\r\n}\r\n\r\n.row-2 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-around;\r\n\tmax-width: 1100px;\r\n\tmargin: auto;\r\n}\r\n\r\n.column-2 {\r\n\twidth: 40%;\r\n\tmargin: 30px 50px;\r\n\tpadding: 60px;\r\n\tbackground-color: white;\r\n}\r\n\r\n.examples{\r\n\tpadding: 2% 3%;\r\n}\r\n\r\n\r\n.sidebar{\r\n\twidth: 30%;\r\n\tpadding: 3% 1% 5% 4%;\r\n\r\n}\r\n\r\n.comment {\r\n\tborder-bottom: 1px solid black;\r\n\tmargin-bottom: 15px;\r\n}\r\n\r\n/* FOOTER */\r\n\r\n.footer{\r\n\tbackground-color: #010101;\r\n    width: 100%;\r\n\tpadding: 20px 0 20px 0;\r\n    text-align: center;\r\n    transition: 200ms;\r\n    \r\n}\r\n\r\n/* Animation */\r\n\r\n.switch-wrapper {\r\n  position: relative;\r\n}\r\n \r\n.switch-wrapper > div {\r\n  position: absolute;\r\n}\r\n\r\n@media only screen and (max-width: 1600px) {\r\n    .nav-left{\r\n\t\twidth: 19%;\r\n\t}\r\n\r\n\t.container-full{\r\n\t\tmax-width: 100%;\r\n\t}\r\n}\r\n\r\n/* Modals */\r\n\r\n\r\n.modal-img{\r\n\twidth: 150px;\r\n\theight: 86px;\r\n}\r\n\r\n.modalImg{\r\n\twidth: 200px;\r\n\theight: auto;\r\n}\r\n\r\ncode{\r\n\tbackground-color: black;\r\n\tcolor: white;\r\n\tfont-size: 0.9em;\r\n\tpadding: 0.3%;\r\n    line-height: 2em;\r\n}\r\n\r\n.h2-modal{\r\n\tcolor: white;\r\n}\r\n\r\n.codeSnippet{\r\n\twidth: 600px;\r\n\talign-content: center;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "h1, h2, h3, h4, h5, h6{\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tcolor:  #68D9FB;\r\n\tfont-weight: 300;\r\n}\r\n\r\np{\r\n\tfont-family: 'PT Sans', sans-serif;\r\n\tfont-size: 1em;\r\n    line-height: 1.4;\r\n\tcolor: #323232;\r\n}\r\n\r\nul{\r\n\tlist-style-type: none;\r\n}\r\n\r\nli {\r\n\tpadding-left: 20px;\r\n    padding-right: 20px;\r\n    font-size: 18px;\r\n}\r\n\r\n.nav { \r\n\tbackground-color: #010101;\r\n\tpadding: 1% 2%;\r\n\tdisplay: flex;\r\n}\r\n\r\n.logo-nav{\r\n\tdisplay: inline-block;\r\n\theight: 36px;\r\n\tmargin-top: 4px;\r\n}\r\n\r\n.logo-txt {\r\n    color: #68D9FB;\r\n    margin-left: -22px;\r\n    padding-top: 10px;\r\n    font-weight: 400;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.logo {\r\n\tanimation: logo-spin infinite 20s linear;\r\n\twidth: 213px;\r\n}\r\n\r\n@keyframes logo-spin {\r\n\tfrom { transform: rotate(0deg); }\r\n\tto { transform: rotate(360deg); }\r\n}\r\n\r\nimg {\r\n\twidth: 100px;\r\n}\r\n\r\n.headline {\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-size: 25px;\r\n\tfont-weight: 400;\r\n\tcolor: white;\r\n}\r\n\r\nh1.headline{\r\n\tfont-size: 2.5em;\r\n}\r\n\r\n.nav-left{\r\n\tdisplay: flex;\r\n\tjustify-content: flex-start;\r\n\tpadding-top: 2px;\r\n\twidth: 10%;\r\n}\r\n\r\n.nav-right{\r\n\tdisplay: flex;\r\n\tflex-grow: 2;\r\n\tjustify-content: flex-end;\r\n\tpadding-right: 2%;\r\n}\r\n\r\n.link-menu {\r\n\tdisplay: block;\r\n\ttext-align: center;\r\n\tpadding: 0 3px;\r\n\ttext-decoration: none;\r\n\tcolor: white;\r\n\tfont-family: 'Poppins', sans-serif;\r\n\tfont-weight: 300;\r\n\tfont-size: 18px;\r\n}\r\n\r\n.link-menu:hover{\r\n\tcolor: #68D9FB;\r\n}\r\n\r\n.ui.inverted.menu {\r\n\tborder-radius: 0;\r\n}\r\n\r\n.search{\r\n\tpadding-left: 1%;\r\n\tmargin-top: -5px;\r\n}\r\n\r\n.container-full {\r\n\twidth: 100%;\r\n\tpadding: 0.5% 2%;\r\n\ttext-align: center;\r\n}\r\n\r\nblockquote{\r\n\tbackground-color: rgba(255,229,100,0.3);\r\n    border-left-color: #ffe564;\r\n    border-left-width: 9px;\r\n    border-left-style: solid;\r\n    padding: 20px 45px 20px 26px;\r\n    margin-bottom: 30px;\r\n    margin-top: 20px;\r\n    margin-left: -30px;\r\n    margin-right: 0;\r\n}\r\n\r\n/* HEADER - home page */\r\n\r\n.header {\r\n\tbackground-color: #262626;\r\n\tpadding: 2%;\r\n}\r\n\r\nbutton {\r\n\tbackground-color: #68D9FB;\r\n\tcolor: white;\r\n\tborder: none;\r\n\tpadding: 10px 25px;\r\n\ttext-align: center;\r\n\tfont-size: 20px;\r\n\t-webkit-transition-duration: 0.4s; /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n    margin-top: 1%;\r\n}\r\n\r\nbutton:hover {\r\n    background-color: white;\r\n    color: #68D9FB;\r\n    border: 1px solid #68D9FB;\r\n    cursor: pointer;\r\n}\r\n\r\n/* OVERVIEW - home page */\r\n\r\n.overview {\r\n\tpadding: 0.5% 2% 3%;\r\n}\r\n\r\n.icons{\r\n\twidth: 60px;\r\n\ttransition: transform .2s;\r\n}\r\n\r\n.icons:hover {\r\n    -ms-transform: scale(1.1); /* IE 9 */\r\n    -webkit-transform: scale(1.1); /* Safari 3-8 */\r\n    transform: scale(1.1); \r\n}\r\n\r\n.row-3 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: center;\r\n\tpadding: 1% 7%;\r\n}\r\n\r\n.column-3 {\r\n\twidth: 35%;\r\n\tpadding: 40px 60px;\r\n\tline-height: 1.6;\r\n}\r\n\r\n/* TUTORIALS - home page */\r\n\r\n.tutorials {\r\n\tbackground-color:#323232;\r\n\tpadding: 1.5% 0 3%;\r\n}\r\n\r\n.row-2 {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-around;\r\n\tmax-width: 1100px;\r\n\tmargin: auto;\r\n}\r\n\r\n.column-2 {\r\n\twidth: 40%;\r\n\tmargin: 30px 50px;\r\n\tpadding: 60px;\r\n\tbackground-color: white;\r\n}\r\n\r\n.examples{\r\n\tpadding: 2% 3%;\r\n}\r\n\r\n\r\n.sidebar{\r\n\twidth: 30%;\r\n\tpadding: 3% 1% 5% 4%;\r\n\r\n}\r\n\r\n.comment {\r\n\tborder-bottom: 1px solid black;\r\n\tmargin-bottom: 15px;\r\n}\r\n\r\n/* FOOTER */\r\n\r\n.footer{\r\n\tbackground-color: #010101;\r\n    width: 100%;\r\n\tpadding: 20px 0 20px 0;\r\n    text-align: center;\r\n    transition: 200ms;\r\n    \r\n}\r\n\r\n/* Animation */\r\n\r\n.switch-wrapper {\r\n  position: relative;\r\n}\r\n \r\n.switch-wrapper > div {\r\n  position: absolute;\r\n}\r\n\r\n@media only screen and (max-width: 1600px) {\r\n    .nav-left{\r\n\t\twidth: 19%;\r\n\t}\r\n\r\n\t.container-full{\r\n\t\tmax-width: 100%;\r\n\t}\r\n}\r\n\r\n/* Modals */\r\n\r\n\r\n.modal-img{\r\n\twidth: 150px;\r\n\theight: 86px;\r\n}\r\n\r\n.modalImg{\r\n\twidth: 200px;\r\n\theight: auto;\r\n}\r\n\r\ncode{\r\n\tbackground-color: black;\r\n\tcolor: white;\r\n\tfont-size: 0.9em;\r\n\tpadding: 0.3%;\r\n    line-height: 2em;\r\n}\r\n\r\n.h2-modal{\r\n\tcolor: white;\r\n}\r\n\r\n.codeSnippet{\r\n\twidth: 600px;\r\n\talign-content: center;\r\n}\r\n\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 860 */
+/* 861 */
 /***/ (function(module, exports) {
 
 /*
@@ -70761,7 +70997,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 861 */
+/* 862 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -70827,7 +71063,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(862);
+var	fixUrls = __webpack_require__(863);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -71147,7 +71383,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 862 */
+/* 863 */
 /***/ (function(module, exports) {
 
 

@@ -13,8 +13,10 @@ import JsxE6 from './Articles/JsxE6';
 import Babel from './Articles/Babel';
 import SemanticUI from './Articles/SemanticUI';
 import Components from './Articles/Components';
+import Props from './Articles/Props';
 
 // Dummy page for displaying how routing works
+
 class Documentation extends Component {
   render() {
     return(
@@ -38,6 +40,7 @@ class Body extends Component {
         <Babel/>
         <SemanticUI/>
         <Components/>
+        <Props/>
       </div>
     )
   }
