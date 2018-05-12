@@ -20,7 +20,8 @@ const State = () => (
         </blockquote>
 
         <p>In the ES6 class style, we can set the initial state of the component in the constructor() by setting this.state to a value. </p>
-        <Image className='codeSnippet' src='images/state.jpg' />
+        <Image className='codeSnippet' src='images/state2.jpg' />
+        <br/>
         <p>The first line of the constructor should always call super(props). If you forget this, there will be errors.</p>
           <br/>
           <a href='https://reactjs.org/docs/state-and-lifecycle.html'> Read more about State here</a>

@@ -15,6 +15,7 @@ import SemanticUI from './Articles/SemanticUI';
 import Components from './Articles/Components';
 import Props from './Articles/Props';
 import State from './Articles/State';
+import Routing from './Articles/Routing';
 
 // Dummy page for displaying how routing works
 
@@ -43,6 +44,7 @@ class Body extends Component {
         <Components/>
         <Props/>
         <State/>
+        <Routing/>
       </div>
     )
   }
