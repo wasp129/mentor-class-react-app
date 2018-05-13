@@ -3,7 +3,16 @@ import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react';
 
 
 const Routing = () => (
-  <Modal trigger={<Button>Routing</Button>} closeIcon>
+  <Modal trigger={
+  <div className='polaroid'>
+      <Button className='img-grid'>
+      <Image className='img-grid-btn' src='images/logo.png'/>
+        <div class="container-btn">
+          <p className='headline'>10. Routing</p>
+        </div>
+      </Button>
+    </div>
+  } closeIcon>
     <Modal.Header>React Routing</Modal.Header>
     <Modal.Content image scrolling>
       <Image className='modalImg' src='images/logo.svg' wrapped />

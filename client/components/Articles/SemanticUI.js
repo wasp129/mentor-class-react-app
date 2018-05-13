@@ -3,7 +3,16 @@ import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react';
 
 
 const SemanticUI = () => (
-  <Modal trigger={<Button>SemanticUI</Button>} closeIcon>
+  <Modal trigger={
+  <div className='polaroid'>
+      <Button className='img-grid'>
+      <Image className='img-grid-btn' src='images/semantic.png'/>
+        <div class="container-btn">
+          <p className='headline'>6. UI Components Semantic React </p>
+        </div>
+      </Button>
+    </div>
+  } closeIcon>
     <Modal.Header> UI Components Semantic React </Modal.Header>
     <Modal.Content image scrolling>
       <Image className='modalImg' src='images/semantic.png' wrapped />

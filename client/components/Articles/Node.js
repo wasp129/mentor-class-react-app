@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react'
 
 const Node = () => (
-  <Modal trigger={<Button>Node.js</Button>} closeIcon>
-    <Modal.Header>Profile Picture</Modal.Header>
-    <Modal.Content image scrolling>
-      <Image wrapped size='large' src='./images/node.png' />
-
-      <Modal.Description>
-        <Header>Modal Header</Header>
-        <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
-
-        
-      </Modal.Description>
-    </Modal.Content>
+  <Modal trigger={
+  <div className='polaroid'>
+      <Button className='img-grid'>
+      <Image className='img-grid-btn' src='images/node.png'/>
+        <div class="container-btn">
+          <p className='headline'>2. What is Node.js?</p>
+        </div>
+      </Button>
+    </div>
+  } closeIcon>
     <Modal.Header>What is Node.js?</Modal.Header>
     <Modal.Content image scrolling>
       <Image size='large' src='images/node.png' wrapped />

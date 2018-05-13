@@ -311,6 +311,51 @@ code{
 	align-content: center;
 }
 
+
+/* Modals Grid */
+
+.img-grid{
+	background: white !important;
+}
+
+.img-grid-btn{
+	margin-top: 9px;
+	width: 300px;
+}
+
+.container-btn{
+	text-align: center;
+ 	padding: 10px 20px;
+}
+
+.polaroid {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 25px;
+	margin-right: 3%;
+	flex-basis: 350px;
+    text-align: center;
+}
+
+.headline{
+	font-family: Poppins;
+	font-weight: 500;
+    font-size: 1.2em;
+    color: #68D9FB;
+    padding-top: 7px;
+}
+
+.grid{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5% 2% 3% 6%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 /* FORUM */
 
 .forum-title {

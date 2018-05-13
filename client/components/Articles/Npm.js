@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react'
 
 const NPM = () => (
-  <Modal trigger={<Button>NPM</Button>} closeIcon>
+  <Modal trigger={
+  <div className='polaroid'>
+      <Button className='img-grid'>
+      <Image className='img-grid-btn' src='images/npm.png'/>
+        <div class="container-btn">
+          <p className='headline'>3. NPM Packages</p>
+        </div>
+      </Button>
+    </div>
+  } closeIcon>
     <Modal.Header>The Node.js package ecosystem and NPM</Modal.Header>
     <Modal.Content image scrolling>
       <Image size='large' src='images/npm.png' wrapped />

@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react'
 
 const JsxE6 = () => (
-  <Modal trigger={<Button>JSX and ES6</Button>} closeIcon>
+  <Modal trigger={
+    <div className='polaroid'>
+      <Button className='img-grid'>
+      <Image className='img-grid-btn' src='images/jsx.png'/>
+        <div class="container-btn">
+          <p className='headline'>4. JSX and ECMAScript</p>
+        </div>
+      </Button>
+    </div>
+  } closeIcon>
     <Modal.Header>Introducing JSX and ECMAScript</Modal.Header>
     <Modal.Content image scrolling>
       <Image size='large' src='images/jsx.png' wrapped />

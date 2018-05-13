@@ -34,7 +34,7 @@ class Documentation extends Component {
 class Body extends Component {
   render() {
     return(
-      <div className="body">
+      <div className="body grid">
         <Overview/>
         <Node/>
         <NPM/>
