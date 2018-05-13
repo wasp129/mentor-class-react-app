@@ -8,7 +8,7 @@ const LiveData = () => (
     <Modal.Content image>
       <Image className='modal-img' src='images/ov-1.png' />
       <Modal.Description>
-        <Header><h2>Live Data</h2></Header>
+        <Header><h2>&#32;Live Data</h2></Header>
         <RealTimeData/>
       </Modal.Description>
     </Modal.Content>

@@ -8,8 +8,17 @@ import Footer from "./Footer.js";
 
 import Overview from './Articles/Overview';
 import Node from './Articles/Node';
+import NPM from './Articles/NPM';
+import JsxE6 from './Articles/JsxE6';
+import Babel from './Articles/Babel';
+import SemanticUI from './Articles/SemanticUI';
+import Components from './Articles/Components';
+import Props from './Articles/Props';
+import State from './Articles/State';
+import Routing from './Articles/Routing';
 
 // Dummy page for displaying how routing works
+
 class Documentation extends Component {
   render() {
     return(
@@ -28,6 +37,14 @@ class Body extends Component {
       <div className="body">
         <Overview/>
         <Node/>
+        <NPM/>
+        <JsxE6/>
+        <Babel/>
+        <SemanticUI/>
+        <Components/>
+        <Props/>
+        <State/>
+        <Routing/>
       </div>
     )
   }

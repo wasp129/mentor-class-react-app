@@ -114,6 +114,18 @@ h1.headline{
 	text-align: center;
 }
 
+blockquote{
+	background-color: rgba(255,229,100,0.3);
+    border-left-color: #ffe564;
+    border-left-width: 9px;
+    border-left-style: solid;
+    padding: 20px 45px 20px 26px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: -30px;
+    margin-right: 0;
+}
+
 /* HEADER - home page */
 
 .header {
@@ -282,6 +294,11 @@ button:hover {
 	height: 86px;
 }
 
+.modalImg{
+	width: 200px;
+	height: auto;
+}
+
 code{
 	background-color: black;
 	color: white;
@@ -289,3 +306,13 @@ code{
 	padding: 0.3%;
     line-height: 2em;
 }
+
+.h2-modal{
+	color: white;
+}
+
+.codeSnippet{
+	width: 600px;
+	align-content: center;
+}
+
