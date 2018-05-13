@@ -14,7 +14,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Nav/>
+        <Nav title="React Guide"/>
         <Body/>
         <Footer title="Mentor Class React JS 2018"/>
       </div>

@@ -20,7 +20,7 @@ class NewArticle extends React.Component {
 	    this.onClick = this.onClick.bind(this);
 	    this.handleTextChange = this.handleTextChange.bind(this);
 	    this.insertNewArticle = this.insertNewArticle.bind(this);
-        this.getData = this.getData.bind(this);
+      this.getData = this.getData.bind(this);
 	}
 
     componentDidMount() {
@@ -79,21 +79,23 @@ handleTextChange(e) {
 render() {
    	return (
    		<div>
-        <Nav/>
-	   		<label htmlFor="title">Title:</label>
-	   		<input type="text" id="title" name="title" value={this.state.title} onChange={this.handleTextChange}></input>
-	   		<label htmlFor="content">Content:</label>
-	   		<input type="text" id="content" name="content" value={this.state.content} onChange={this.handleTextChange}></input>
-	   		<label htmlFor="category">Category:</label>
-	   		<input type="text" id="category" name="category" value={this.state.category} onChange={this.handleTextChange}></input>
-        <button onClick={this.onClick}>Add New Article</button>
+        <Nav title="Forum"/>
+        <div className="text-input">
+          <h2>Leave a comment, and tell us what you think.</h2>
+  	   		<input type="text" id="title" name="title" value={this.state.title} placeholder="Title" onChange={this.handleTextChange}></input>
+          <input type="text" id="category" name="category" value={this.state.category} placeholder="Subject" onChange={this.handleTextChange}></input>
+          <br/><br/>
+  	   		<textarea type="text" id="content" name="content" value={this.state.content} placeholder="Content" onChange={this.handleTextChange}></textarea>
+          <br/><br/>
+          <button className="forum-submit" onClick={this.onClick}>Submit</button>
+        </div>
         {
           this.state.data.map(function(exp){
             return  (
               <div className="comment">
-                <h2>{exp.title}</h2>
-                <p>{exp.category}</p>
-                <p>{exp.content}</p>
+                <h2 className="forum-title">{exp.title}</h2>
+                <p className="forum-subject">{exp.category}</p>
+                <p className="forum-content">{exp.content}</p>
               </div>
             )
           })

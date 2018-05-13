@@ -30,7 +30,7 @@
   "watch": {
     "start": {
       "patterns": ["client", "server"],
-      "extensions": "js",
+      "extensions": ["js", "css"],
       "ignore": "client/bundle.js"
     }
   },

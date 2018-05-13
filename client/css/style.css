@@ -216,11 +216,6 @@ button:hover {
 
 }
 
-.comment {
-	border-bottom: 1px solid black;
-	margin-bottom: 15px;
-}
-
 /* FOOTER */
 
 .footer{
@@ -315,4 +310,88 @@ code{
 	width: 600px;
 	align-content: center;
 }
+
+/* FORUM */
+
+.forum-title {
+	font-weight: bold;
+	color: #262626;
+	margin-left: 20px;
+}
+
+.forum-subject {
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+.forum-content {
+	margin-left: 20px;
+}
+
+.forum-submit {
+	margin-bottom: 35px;
+}
+
+.comment {
+	border-bottom: 1px solid #262626;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+
+.text-input {
+	margin-left: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #262626;
+}
+
+#title, #category {
+	height: 35px;
+	width: 300px;
+}
+
+#category {
+	margin-left: 20px;
+}
+
+#content {
+	width: 620px;
+	height: 180px;
+}
+
+textarea {
+	resize: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

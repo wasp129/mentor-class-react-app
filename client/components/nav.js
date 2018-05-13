@@ -11,7 +11,7 @@ class Nav extends Component {
       <div className="nav container-full">
         <div className="nav-left">
           <img src="../images/logo.svg" className="logo-nav" alt="logo react"/>
-          <p className="logo-txt">React Guide</p>
+          <p className="logo-txt">{this.props.title}</p>
         </div>
         
         <ul className="nav-right" role="navigation">
