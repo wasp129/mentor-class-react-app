@@ -23,7 +23,7 @@ class Documentation extends Component {
   render() {
     return(
       <div className="docs-page">
-      	<Nav />
+      	<Nav title='Documentation'/>
         <Body/>
         <Footer title="Mentor Class React JS 2018"/>
       </div>
