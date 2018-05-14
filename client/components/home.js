@@ -4,6 +4,8 @@ import Asset1 from "../images/Asset1.png";
 import Asset2 from "../images/Asset2.png";
 import Asset3 from "../images/Asset3.png";
 import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react';
+import { Parallax, Background } from 'react-parallax';
+
 
 import Nav from "./Nav.js";
 import Footer from "./Footer.js";
@@ -33,6 +35,7 @@ class Body extends Component {
       <div className="body">
         <HeaderMain title="Do you React?"/>
         <Overview title="Overview"/> 
+        <BgrImg/>
         <Tutorials title="Examples"/>
         <Clock/>
       </div>
@@ -82,6 +85,20 @@ class Overview extends Component {
   }
 }
 
+class BgrImg extends Component {
+  render() {
+    return (
+      <Parallax
+      bgImage={require('../images/bgr.png')}
+      bgImageAlt="bgr"
+      strength={300}
+    >
+      <div style={{ height: '380px' }} />
+    </Parallax>
+    )
+  }
+}
+
 class Tutorials extends Component {
   render() {
     return (
@@ -90,11 +107,20 @@ class Tutorials extends Component {
         <div className="row-2">
         <div className="column-2">
         <h3>Internet Data</h3>
+        <br/>
           <LiveData/>
         </div>
         <div className="column-2">
         <h3>To-Do App</h3>
-          <button>View Code</button>
+        <br/>
+          <div className='polaroid'>
+            <Button className='img-grid'>
+            <Image className='img-grid-btn' src='images/logo.png'/>
+              <div class="container-btn">
+                <p className='headline'>View App</p>
+              </div>
+            </Button>
+          </div>
         </div>
         </div>
 
@@ -163,7 +189,7 @@ class Clock extends Component {
     render() {
         return (
             <div className="examples container-full" >
-                <h2>The time is now: {this.state.date.toLocaleTimeString()}</h2>
+                <h2><b>The time is now: {this.state.date.toLocaleTimeString()}</b></h2>
             </div>
         )
     }
