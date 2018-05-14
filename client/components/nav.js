@@ -25,7 +25,10 @@ class Nav extends Component {
             <i aria-hidden="true" className="search icon"></i>
           </div>
          </ul>
+
       </div>
+
+
     );
   }
 }

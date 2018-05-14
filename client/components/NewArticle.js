@@ -98,7 +98,7 @@ render() {
           <br/><br/>
           <button className="forum-submit" onClick={this.onClick}>Submit</button>
         </div>
-          <div style={{ height: '80px' }} />
+          <div className="height-div"style={{ height: '80px' }} />
         </Parallax>
         
         {

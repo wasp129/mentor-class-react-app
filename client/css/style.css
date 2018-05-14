@@ -358,6 +358,7 @@ code{
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
 
 }
 
@@ -454,19 +455,109 @@ textarea {
 }
 
 
+/* MOBILE VERSION */
+
+@media screen and (max-width: 900px) {
+
+	.header {
+		padding: 10%;
+	}
+
+	.row-3, .row-2 {
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.column-3, .column-2 {
+		width: 70%;
+		padding: 30px 0;
+		margin: auto;
+	}
+
+	div.nav.container-full {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav-left {
+		width: 100% ;
+		justify-content: center;
+		padding-right: 5%;
+	}
+
+	.nav-right {
+		padding: 0;
+		justify-content: center;
+		flex-wrap: wrap;
+		line-height: 32px;
+	}
+
+	input#title, input#category, textarea#content, .forum-submit {
+		width: 85%;
+	}
+
+	input#category {
+		margin-left: 0;
+	}
+
+	.ui.modal .content>.image {
+		height: auto;
+	}
+
+	.height-div {
+		display: none;
+	}
+
+	.ui.segment.comment {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	img.default {
+		margin: 0 auto;
+    	display: flex;
+	}
+
+	.ui.mini.icon.input.search {
+		display: none;
+	}
+}
 
 
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+	input#category {
+		margin-left: 0px;
+	}
+
+	input#title, input#category, textarea#content, .forum-submit {
+		width: 70%;
+	}
+
+	a.link-menu {
+		font-size: 15px;
+	}
+
+}
 
 
+@media screen and (min-width: 901px) and (max-width: 1225px) {
+	.nav-left {
+		justify-content: space-between;
+	}
 
+	img.logo-nav {
+		width: 50px;
+	}
 
+	p.logo-txt {
+		font-size: 19px;
+	}
 
-
-
-
-
-
-
+}
 
 
 
