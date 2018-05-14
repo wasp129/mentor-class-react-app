@@ -49,8 +49,16 @@ class HeaderMain extends Component {
   render(){
     return (
       <div className="header container-full">
-        <img src="../images/logo.svg" className="logo" alt="logo react"/>
-        <h1 className="headline">{this.props.title}</h1>
+        <Parallax
+          bgImage={require('../images/bgr2.png')}
+          bgImageAlt="bgr"
+          strength={300}
+        >
+          <div style={{ height: '400px', paddingBottom: '6%' }} >
+            <img src="../images/logo.svg" className="logo" alt="logo react"/>
+            <h1 className="headline">{this.props.title}</h1>
+          </div>
+        </Parallax>
       </div>
     )
   }
@@ -105,11 +113,11 @@ class Tutorials extends Component {
       <div className="tutorials container-full"> 
         <h2>{this.props.title}</h2>
         <div className="row-2">
-        <div className="column-2">
-        <h3>Internet Data</h3>
-        <br/>
-          <LiveData/>
-        </div>
+          <div className="column-2">
+          <h3>Internet Data</h3>
+          <br/>
+            <LiveData/>
+          </div>
         <div className="column-2">
         <h3>To-Do App</h3>
         <br/>
