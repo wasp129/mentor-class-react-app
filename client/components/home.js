@@ -79,7 +79,7 @@ class Overview extends Component {
             <p>Amonng the documentation you will find small code snippets and guidance how to start working with the React library. This web app serves as an introduction to the followng workshop. </p>
           </div>
         </div>
-          <button>Get Started</button>
+          <Link className="link-menu" to="/Documentation"><button>Get Started</button></Link>
       </div>
     )
   }

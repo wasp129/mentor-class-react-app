@@ -9,7 +9,7 @@ import Footer from "./Footer.js";
 
 var querystring = require('querystring');
 
-class NewArticle extends React.Component {
+class Forum extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -127,7 +127,7 @@ render() {
 
 }
 
-export default NewArticle;
+export default Forum;
 
 
 
