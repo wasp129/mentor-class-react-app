@@ -65,7 +65,7 @@ class HeaderMain extends Component {
   }
 }
 
-//Petya OVERVIEW START
+//OVERVIEW START
 class Overview extends Component {
   render() {
     return (
@@ -112,15 +112,15 @@ class Tutorials extends Component {
   render() {
     return (
       <div className="tutorials container-full"> 
-        <h2>{this.props.title}</h2>
+        <h1 className="headline">{this.props.title}</h1>
         <div className="row-2">
           <div className="column-2">
-          <h3>Internet Data</h3>
+          <h3><b>Internet Data</b></h3>
           <br/>
             <LiveData/>
           </div>
         <div className="column-2">
-        <h3>Examples with state</h3>
+        <h3><b>Examples with state</b></h3>
         <br/>
           <Click/>
         </div>
@@ -160,7 +160,7 @@ class Clock extends Component {
 
     render() {
         return (
-            <div className="examples container-full" >
+            <div className="examples container-full time-container" >
                 <h2><b>The time is now: {this.state.date.toLocaleTimeString()}</b></h2>
             </div>
         )

@@ -4,7 +4,7 @@ import Clickcounter from './Clickcounter.js';
 
 const Click = () => (
   <Modal trigger={
-  <div className='polaroid'>
+  <div className='polaroid styling-polaroid'>
       <Button className='img-grid'>
       <Image className='img-grid-btn' src='images/logo.png'/>
         <div class="container-btn">

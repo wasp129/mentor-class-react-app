@@ -140,7 +140,7 @@ blockquote{
 button {
 	background-color: #68D9FB;
 	color: white;
-	border: none;
+	border: 1px solid;
 	padding: 10px 25px;
 	text-align: center;
 	font-size: 20px;
@@ -190,8 +190,9 @@ button:hover {
 /* TUTORIALS - home page */
 
 .tutorials {
-	background-color:#323232;
+	background-color:white;
 	padding: 1.5% 0 3%;
+
 }
 
 .row-2 {
@@ -206,8 +207,15 @@ button:hover {
 .column-2 {
 	width: 40%;
 	margin: 30px 50px;
-	padding: 60px;
+	/* padding: 60px; */
 	background-color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.time-container {
+	background-color: #f1f1f1;
 }
 
 .examples{
@@ -363,6 +371,7 @@ code{
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
 
 }
 
@@ -458,20 +467,120 @@ textarea {
 	margin-top: 10px;	
 }
 
+/* EXAMPLES HOME petya */
+
+.styling-polaroid {
+	width: 470px;
+}
 
 
+/* MOBILE VERSION */
+
+@media screen and (max-width: 900px) {
+
+	.header {
+		padding: 10%;
+	}
+
+	.row-3, .row-2 {
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.column-3, .column-2 {
+		width: 70%;
+		padding: 30px 0;
+		margin: auto;
+	}
+
+	.column-2 {
+		flex-direction: column;
+	}
+
+	div.nav.container-full {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav-left {
+		width: 100% ;
+		justify-content: center;
+		padding-right: 5%;
+	}
+
+	.nav-right {
+		padding: 0;
+		justify-content: center;
+		flex-wrap: wrap;
+		line-height: 32px;
+	}
+
+	input#title, input#category, textarea#content, .forum-submit {
+		width: 85%;
+	}
+
+	input#category {
+		margin-left: 0;
+	}
+
+	.ui.modal .content>.image {
+		height: auto;
+	}
+
+	.height-div {
+		display: none;
+	}
+
+	.ui.segment.comment {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	img.default {
+		margin: 0 auto;
+    	display: flex;
+	}
+
+	.ui.mini.icon.input.search {
+		display: none;
+	}
+}
 
 
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+	input#category {
+		margin-left: 0px;
+	}
+
+	input#title, input#category, textarea#content, .forum-submit {
+		width: 70%;
+	}
+
+	a.link-menu {
+		font-size: 15px;
+	}
+
+}
 
 
+@media screen and (min-width: 901px) and (max-width: 1225px) {
+	.nav-left {
+		justify-content: space-between;
+	}
 
+	img.logo-nav {
+		width: 50px;
+	}
 
+	p.logo-txt {
+		font-size: 19px;
+	}
 
-
-
-
-
-
+}
 
 
 
