@@ -11,6 +11,7 @@ import Nav from "./Nav.js";
 import Footer from "./Footer.js";
 
 import LiveData from './Examples/LiveData';
+import Click from './Examples/Click';
 
 class Home extends Component {
   render() {
@@ -111,16 +112,9 @@ class Tutorials extends Component {
           <LiveData/>
         </div>
         <div className="column-2">
-        <h3>To-Do App</h3>
+        <h3>Examples with state</h3>
         <br/>
-          <div className='polaroid'>
-            <Button className='img-grid'>
-            <Image className='img-grid-btn' src='images/logo.png'/>
-              <div class="container-btn">
-                <p className='headline'>View App</p>
-              </div>
-            </Button>
-          </div>
+          <Click/>
         </div>
         </div>
 
@@ -130,36 +124,6 @@ class Tutorials extends Component {
 }
 
 // EXAMPLES WITH STATE. A COUNTER, A DYNAMIC MESSAGE AND A CLOCK
-
-// class State extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             clicks: 0,
-//             message: "Gallant Fox"
-//         };
-//     }
-
-//     UpdateCount = () => {
-//         this.setState({ clicks: this.state.clicks + 1});
-//     }
-
-//     UpdateMessage = () => {
-//         this.setState({ message: "War admiral"});
-//     }
-
-//     render() {
-//         return (
-//             <div className="examples container-full" >
-//                 <h2>Examples with state</h2>
-//                 <h2 style={h2Style}>{this.state.clicks}</h2>
-//                 <button onClick = {this.UpdateCount}>Click to count</button>
-//                 <h2 style={h2Style}>{this.state.message}</h2>
-//                 <button onClick = {this.UpdateMessage}>Update the message</button>
-//             </div>
-//         )
-//     }
-// }
 
 class Clock extends Component {
     constructor(props) {
