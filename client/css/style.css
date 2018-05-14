@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:300,400,500,600,700&subset=latin-ext');
 
+body{
+	min-height: 100%;
+	margin-bottom: 0;
+}
+
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Poppins', sans-serif;
 	color:  #68D9FB;
@@ -47,7 +52,8 @@ li {
 
 .logo {
 	animation: logo-spin infinite 20s linear;
-	width: 213px;
+	width: 250px;
+	margin-top: 6%;
 }
 
 @keyframes logo-spin {
@@ -110,7 +116,6 @@ h1.headline{
 
 .container-full {
 	width: 100%;
-	padding: 0.5% 2%;
 	text-align: center;
 }
 
@@ -130,13 +135,12 @@ blockquote{
 
 .header {
 	background-color: #262626;
-	padding: 2%;
 }
 
 button {
 	background-color: #68D9FB;
 	color: white;
-	border: none;
+	border: 1px solid;
 	padding: 10px 25px;
 	text-align: center;
 	font-size: 20px;
@@ -186,8 +190,9 @@ button:hover {
 /* TUTORIALS - home page */
 
 .tutorials {
-	background-color:#323232;
+	background-color:white;
 	padding: 1.5% 0 3%;
+
 }
 
 .row-2 {
@@ -202,8 +207,15 @@ button:hover {
 .column-2 {
 	width: 40%;
 	margin: 30px 50px;
-	padding: 60px;
+	/* padding: 60px; */
 	background-color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.time-container {
+	background-color: #f1f1f1;
 }
 
 .examples{
@@ -223,9 +235,10 @@ button:hover {
 	background-color: #010101;
     width: 100%;
 	padding: 20px 0 20px 0;
+	margin-bottom: 0;
     text-align: center;
     transition: 200ms;
-    
+    position: fixed;
     
 }
 
@@ -287,7 +300,7 @@ button:hover {
 }
 
 .formContainer {
-	margin: 50px auto;
+	margin: 9% auto;
 }
 
 .modalImg{
@@ -337,8 +350,8 @@ code{
 	background-color: white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin-bottom: 25px;
-	margin-right: 3%;
-	flex-basis: 350px;
+    margin-right: 2%;
+    flex-basis: 246px;
     text-align: center;
 }
 
@@ -454,6 +467,12 @@ textarea {
 	margin-top: 10px;	
 }
 
+/* EXAMPLES HOME petya */
+
+.styling-polaroid {
+	width: 470px;
+}
+
 
 /* MOBILE VERSION */
 
@@ -474,6 +493,10 @@ textarea {
 		width: 70%;
 		padding: 30px 0;
 		margin: auto;
+	}
+
+	.column-2 {
+		flex-direction: column;
 	}
 
 	div.nav.container-full {
