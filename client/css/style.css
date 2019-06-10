@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 p{
-	font-family: 'PT Sans', sans-serif;
+	font-family:'PT Sans', sans-serif;
 	font-size: 17px;
     line-height: 1.4;
 	color: #323232;
@@ -28,7 +28,7 @@ li {
     font-size: 18px;
 }
 
-.nav { 
+.nav {
 	background-color: #010101;
 	padding: 1% 2%;
 	display: flex;
@@ -171,7 +171,7 @@ button:hover {
 .icons:hover {
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .row-3 {
@@ -239,7 +239,7 @@ button:hover {
     text-align: center;
     transition: 200ms;
     position: fixed;
-    
+
 }
 
 /* Animation */
@@ -247,7 +247,7 @@ button:hover {
 .switch-wrapper {
   position: relative;
 }
- 
+
 .switch-wrapper > div {
   position: absolute;
 }
@@ -267,7 +267,7 @@ button:hover {
 
 .modal-img{
 	width: 150px;
-	height: 86px;	
+	height: 86px;
 }
 
 /* LOGIN FORM */
@@ -464,7 +464,7 @@ textarea {
 
 .default{
 	width: 120px;
-	margin-top: 10px;	
+	margin-top: 10px;
 }
 
 /* EXAMPLES HOME petya */
@@ -581,20 +581,3 @@ textarea {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
