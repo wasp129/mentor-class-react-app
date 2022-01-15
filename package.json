@@ -9,7 +9,7 @@
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "foreman": "^2.0.0",
-    "marked": "^0.3.19",
+    "marked": "^4.0.10",
     "mongoose": "^5.0.16",
     "nodemon": "^1.17.3",
     "npm-watch": "^0.3.0",
